@@ -5,7 +5,7 @@
 #show math.equation: set text(12pt)
 #set math.cases(gap: 0.2em)
 
-= Notes on Math 322: PDE
+= Notes on A New Kind of Science
 Harry Luo\
 Fall 2024
 
@@ -16,7 +16,7 @@ Fall 2024
 #pagebreak()
 
 //Notations
-#include "322notations.typ"
+#include "nksNotations.typ"
 
 //part 1: from week 1 to midterm 1
-#include "322part1.typ"
+#include "nksPart1.typ"
