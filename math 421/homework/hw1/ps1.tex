@@ -1,0 +1,248 @@
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb,graphicx}
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+\begin{document}
+
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries Math 421, Section 1 
+\\ 
+Homework 1
+\\ 
+Harry Luo % Fill in your name here
+\\ [24pt] 
+\end{center}
+
+%
+% Problem 1 -----------------------------------------------------
+\begin{problem}[De Morgan's laws]
+Let A and B be statements.  Use a truth table to prove the following:
+\begin{enumerate}
+\item ``Not (A and B)'' is equivalent to ``(not A) or (not B)''.
+\item ``Not (A or B)'' is equivalent to ``(not A) and (not B)''.
+\end{enumerate}
+\end{problem}
+\begin{solution} \quad \newline
+
+(a): \begin{center} % This puts the following in the middle of the page
+    \begin{tabular}{ c|c|c|c|c|c} % This starts the table
+    % (and says that we want 3 centered columns separaterd by vertical lines)
+    A & B & not (A and B) & not A & not B& (not A) or (not B)\\ % This is the first row of entries.  
+    % (Use "&" to seperate entries, and "\\" to end the line.)
+    \hline % This creates a horizontal line
+    T & T & F&F&F&F \\ % Second row of entries...
+    T & F &T &F &T &T \\ 
+    F & T &T &T &F & T\\ 
+    F & F &T &T &T &T\\
+    \end{tabular}
+    \end{center}
+We have shown that the columns for ``not (A and B)'' and ``(not A) or (not B)'' are the same, so the two statements are equivalent. 
+\newline
+    
+(b): \begin{center}
+    \begin{tabular}{ c|c|c|c|c|c}
+    A & B & not (A or B) & not A & not B& (not A) and (not B)\\
+    \hline
+    T & T & F&F&F&F \\
+    T & F &F &F &T &F \\
+    F & T &F &T &F & F\\
+    F & F &T &T &T &T\\
+
+        
+    \end{tabular}
+\end{center}
+We have shown that the columns for ``not (A or B)'' and ``(not A) and (not B)'' are the same, so the two statements are equivalent.
+
+\end{solution}
+
+
+
+%
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}[The distributive property]
+Let A, B, and C be statements.  Use a truth table to prove the following:
+\begin{enumerate}
+\item ``A and (B or C)'' is equivalent to ``(A and B) or (A and C)''.
+\item ``A or (B and C)'' is equivalent to ``(A or B) and (A or C)''.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\quad \newline
+    
+    (a): \begin{center}
+    \begin{tabular}{ c|c|c|c|c|c|c|c}
+    A & B & C & A and (B or C) & A and B & A and C & (A and B) or (A and C)\\
+    \hline
+    T & T & T & T & T & T & T\\
+    T & T & F & T & T & T & T\\
+    T & F & T & T & F & T & T\\
+    T & F & F & F & F & F & F\\
+    F & T & T & F & F & F & F\\
+    F & T & F & F & F & F & F\\
+    F & F & T & F & F & F & F\\
+    F & F & F & F & F & F & F\\
+    \end{tabular}
+\end{center}
+We have shown that the columns for ``A and (B or C)'' and ``(A and B) or (A and C)'' are the same, so the two statements are equivalent.\newline
+
+(b):
+
+\begin{center}
+
+\begin{tabular}{ c|c|c|c|c|c|c|c}
+A & B & C & A or (B and C) & A or B & A or C & (A or B) and (A or C)\\
+\hline
+T & T & T & T & T & T & T\\
+T & T & F & T & T & T & T\\
+T & F & T & T & T & T & T\\
+T & F & F & T & T & T & T\\
+F & T & T & T & T & T & T\\
+F & T & F & F & T & F & F\\
+F & F & T & F & F & T & F\\
+F & F & F & F & F & F & F\\
+\end{tabular}
+
+\end{center}
+
+We have shown that the columns for ``A or (B and C)'' and ``(A or B) and (A or C)'' are the same, so the two statements are equivalent.
+
+\end{solution}
+
+%
+% Problem 3 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let A and B be statements.  If we know that A implies B, which one of the following can we conclude?
+\begin{enumerate}
+\item A cannot be false.
+\item A and B are both true.
+\item If A is false, then B is false.
+\item B cannot be false.
+\item If B is false, then A is false.
+\item If B is true, then A is true.
+\item At least one of A and B is true.
+\end{enumerate}
+\end{problem}
+\begin{solution} \quad \newline
+
+    (e) is the correct conclusion. For an implication, the only way for it to be true while its consequent is false, is to construct a false antecedent. Therefore, if B is false, then A must be false.
+
+\end{solution}
+
+%
+% Problem 4 -----------------------------------------------------
+\newpage
+\begin{problem}
+Negate the following sentences:
+\begin{enumerate}
+\item If there is a job worth doing, then it is worth doing well.
+\item Every cloud has a silver lining.
+\item For every complex problem, there is an answer that is clear, simple, and wrong.
+\end{enumerate}
+\end{problem}
+\begin{solution}\quad \newline
+
+    (a): We denote: $ A $ as "there is a job worth doing" and $ B $ as "it is worth doing well". The original sentence can be written as $ A \implies B $. The negation of this sentence is: $$ \text{not} (A \implies B) = A \; \text{and} \; \text{not}B.  $$ 
+    In English this is 
+    \fbox{"There is a job worth doing, and it is not worth doing well."}
+\\
+
+    (b): The negation of a universal statement is to find an exsistential counterexample. Thus the negation of "Every cloud has a silver lining" is \fbox{There is a cloud without a silver lining.}\\
+
+    (c): We denote: \begin{itemize}
+        \item  $x$ = a complex problem.
+        \item $ X $ = set of all complex problems.
+        \item $y$ = an answer.
+        \item $ Y $ = set of all answers.
+        \item $A(x,y)$ = $y$ is an answer to the problem $ x $ .
+        \item $ C(y) $= $ y $ is clear. 
+        \item $S(y)$ = $y$ is simple.
+        \item $W(y)$ = $y$ is wrong.
+    \end{itemize}
+    
+The statement can be translated as: 
+    $$\forall x \in X  \; \exists y \in Y \, \text{s.t.} (A(x,y) \, \text{and} \, C(y) \, \text{and} S(y) \, \text{and} \, W(y)))$$
+
+Its negation is:
+$$ 
+\exists x \in X \; \forall y \in Y \, \text{s.t.}  (\text{not}\{A(x,y) \, \text{and} \, C(y) \, \text{and} S(y) \, \text{and} \, W(y))\})
+$$ 
+ In English, this reads: 
+ 
+ \fbox{\parbox{0.8\linewidth}{"There is at least one complex problem that doesn't have any answer that is simultaneously clear, simple, and wrong."}}
+
+
+\end{solution}
+
+% Problem 5 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let A, B, and C be statements.  Negate the following sentences:
+\begin{enumerate}
+\item At least one of A and B are true.
+\item Both A and B are false.
+\item At least two of A, B, and C are false.
+\end{enumerate}
+\end{problem}
+\begin{solution}  \, \\
+    
+    
+    (a) \begin{align}
+        &\text{translation: } &&A \text{ or } B \\
+        &\text{negation: } &&\text{not} (A \text{ or } B) = \text{not} A \text{ and } \text{not} B
+    \end{align}
+
+    (b) \begin{align}
+        &\text{translation: } &&\text{not} A \text{ and } \text{not} B \\
+        &\text{negation: } &&\text{not} (\text{not} A \text{ and } \text{not} B) = A \text{ or } B
+    \end{align}
+
+    (c) \begin{align}
+        \text{  translation: } &(\text{not}\,A \text{ and}\,\text{not}\,B) \text{ or}\, (\text{not}\,A \text{ and}\, \text{ not}\,C) \text{ or}\,(\text{ not}\,B \text{ and}\,\text{ not}\,C)\\
+        \text{negation: } &\text{not}((\text{not}\,A \text{ and}\,\text{not}\,B) \text{ or}\, (\text{not}\,A \text{ and}\, \text{ not}\,C) \text{ or}\,(\text{ not}\,B \text{ and}\,\text{ not}\,C))\\
+        & = ( A \text{ or}\, B) and (A  \text{ or}\, C) \text{ and}\, (B \text{ or}\, C)
+    \end{align}
+In English, the negation is \fbox{at least two of A, B, and C are true.}
+\end{solution}
+
+% Problem 6 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $X$ be a set, and let $P(x)$ be a statement about elements $x$ in $X$.  Negate the following sentences:
+\begin{enumerate}
+\item For every $x$ in $X$, there is a $y$ in $X$ not equal to $x$, for which $P(y)$ is true.
+\item If $P(x)$ and $P(y)$ are both true, then $x = y$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 6 here.)
+
+(You may want to use the following symbols: `for all' $\forall$, `there exists' $\exists$, and `in' $\in$.)
+% The dollar signs "$" start and end inline math mode; these symbols can only be used in math mode. 
+\end{solution}
+
+\end{document}
