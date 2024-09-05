@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.4)  4 SEP 2024 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.4)  5 SEP 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -280,6 +280,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
 
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+
 
 [6] (./ps1.aux)
  ***********
@@ -296,7 +301,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  57i,10n,65p,350b,241s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/surface/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk><c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ps1.pdf (6 pages, 63190 bytes).
+Output written on ps1.pdf (6 pages, 63053 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

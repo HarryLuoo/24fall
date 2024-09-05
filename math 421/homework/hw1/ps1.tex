@@ -178,19 +178,19 @@ Negate the following sentences:
         \item $ X $ = set of all complex problems.
         \item $y$ = an answer.
         \item $ Y $ = set of all answers.
-        \item $A(x,y)$ = $y$ is an answer to the problem $ x $ .
         \item $ C(y) $= $ y $ is clear. 
         \item $S(y)$ = $y$ is simple.
         \item $W(y)$ = $y$ is wrong.
     \end{itemize}
     
 The statement can be translated as: 
-    $$\forall x \in X  \; \exists y \in Y \, \text{s.t.} (A(x,y) \, \text{and} \, C(y) \, \text{and} S(y) \, \text{and} \, W(y)))$$
+    $$\forall x \in X , \; \exists y \in Y \, \text{s.t.} (C(y) \, \text{and} S(y) \, \text{and} \, W(y)))$$
 
 Its negation is:
-$$ 
-\exists x \in X \; \forall y \in Y \, \text{s.t.}  (\text{not}\{A(x,y) \, \text{and} \, C(y) \, \text{and} S(y) \, \text{and} \, W(y))\})
-$$ 
+\begin{align}
+&\exists x \in X , \; \forall y \in Y \, \text{s.t.}  (\text{not}\{ C(y) \, \text{and} S(y) \, \text{and} \, W(y)\}) \\
+= & \exists x \in X , \; \forall y \in Y \, \text{s.t.}  ((\text{not}\, C(y)) \, \text{and} (\text{ not}\, S(y)) \, \text{and} \, (\text{ not} W(y)))
+\end{align}
  In English, this reads: 
  
  \fbox{\parbox{0.8\linewidth}{"There is at least one complex problem that doesn't have any answer that is simultaneously clear, simple, and wrong."}}
@@ -224,7 +224,7 @@ Let A, B, and C be statements.  Negate the following sentences:
     (c) \begin{align}
         \text{  translation: } &(\text{not}\,A \text{ and}\,\text{not}\,B) \text{ or}\, (\text{not}\,A \text{ and}\, \text{ not}\,C) \text{ or}\,(\text{ not}\,B \text{ and}\,\text{ not}\,C)\\
         \text{negation: } &\text{not}((\text{not}\,A \text{ and}\,\text{not}\,B) \text{ or}\, (\text{not}\,A \text{ and}\, \text{ not}\,C) \text{ or}\,(\text{ not}\,B \text{ and}\,\text{ not}\,C))\\
-        & = ( A \text{ or}\, B) and (A  \text{ or}\, C) \text{ and}\, (B \text{ or}\, C)
+        & = ( A \text{ or}\, B) \text{ and}\, (A  \text{ or}\, C) \text{ and}\, (B \text{ or}\, C)
     \end{align}
 In English, the negation is \fbox{at least two of A, B, and C are true.}
 \end{solution}
@@ -238,11 +238,27 @@ Let $X$ be a set, and let $P(x)$ be a statement about elements $x$ in $X$.  Nega
 \item If $P(x)$ and $P(y)$ are both true, then $x = y$.
 \end{enumerate}
 \end{problem}
-\begin{solution}
-(Type your solution to problem 6 here.)
+\begin{solution} \, \\
 
-(You may want to use the following symbols: `for all' $\forall$, `there exists' $\exists$, and `in' $\in$.)
-% The dollar signs "$" start and end inline math mode; these symbols can only be used in math mode. 
+(a)translation: $$ 
+    \forall x \in X, \exists y \in X \, \text{ s.t.}\, ( y \neq x\, \text{and}\, P(y)) 
+$$ 
+
+Negation: $$ 
+     \exists x \in X, \forall y \in X \, \text{ s.t.}\, ( y = x\, \text{or}\, \text{not} P(y))
+$$ 
+
+
+(b) translation:$$ 
+    \forall x, y \in X , \text{ s.t.}\,( (P(x) \text{ and }\, P(y)) \implies (x = y))
+$$ 
+
+Negation:
+\begin{align}
+ &   \exists x, y \in X \; \text{ s.t. }\,\text{ not}\, (\text{ not}\,(P(x) \text{  and}\, P(y)) \text{ or}\, (x = y))\\  
+=  &\exists x, y \in X \; \text{ s.t.}\, (  P(x) \text{ and}\,  P(y) \text{ and}\, (x \neq y))\,
+\end{align}
+
 \end{solution}
 
 \end{document}
