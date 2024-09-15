@@ -14,4 +14,7 @@ $
   nabla^2 eq.triple nabla dot nabla\
         nabla^2 u = partial^2_x u + partial^2_y u + partial^2_z u = u_(x x) + u_(y y) + u_(z z) 
   $ 
-  
+
+- Boldface vector:$ 
+    arrow(x)=  bold(x) quad "v.s. scalar"  x
+$ 

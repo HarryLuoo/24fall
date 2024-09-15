@@ -1,0 +1,108 @@
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb}
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries Math 421, Section 1 
+\\ 
+Homework 2
+\\ 
+(Name) % Fill in your name here
+\\ [24pt] 
+\end{center}
+
+% Problem 1 -----------------------------------------------------
+\begin{problem}
+Prove that for any $x,y\in\mathbb{N}$, if $x$ is odd and $y$ is odd then $x+y$ is even.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 1 here.)
+\end{solution}
+
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}
+Prove that for any $x\in\mathbb{N}$, if $x$ is odd then $x^3$ is odd.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 2 here.)
+\end{solution}
+
+% Problem 3 -----------------------------------------------------
+\newpage
+\begin{problem}
+Using induction, prove that for all $n\in\mathbb{N}$ we have
+\begin{equation*}
+1+3+5+\dots+(2n-1) = n^2 .
+\end{equation*}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 3 here.)
+\end{solution}
+
+% Problem 4 -----------------------------------------------------
+\newpage
+\begin{problem}
+Compute the following sum:
+\begin{equation*}
+\frac{1}{1\cdot 3} + \frac{1}{3\cdot 5} + \dots + \frac{1}{(2n-1)(2n+1)} .
+\end{equation*}
+Prove that your answer is true for all $n\in\mathbb{N}$ using induction.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 4 here.)
+\end{solution}
+
+% Problem 5 -----------------------------------------------------
+\newpage
+\begin{problem}
+Prove the following statements for all $a,b\in\mathbb{R}$:
+\begin{enumerate}
+\item $-a + (-b) = -(a+b)$.
+\item If $a,b\neq 0$ then $a^{-1}\cdot b^{-1} = (ab)^{-1}$.
+\end{enumerate}
+Carefully justify every step using properties of $\mathbb{R}$ stated in lecture.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 5 here.)
+\end{solution}
+
+% Problem 6 -----------------------------------------------------
+\newpage
+\begin{problem}
+Prove the following statements for all $a,b,c,d\in\mathbb{R}$:
+\begin{enumerate}
+\item If $a<b$ and $c<d$ then $a+c < b+d$.
+\item If $0<a<b$ and $0<c<d$ then $ac<bd$.
+\end{enumerate}
+Carefully justify every step using properties of $\mathbb{R}$ stated in lecture.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 6 here.)
+\end{solution}
+
+\end{document}
