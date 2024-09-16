@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1726529056.63234 "c:/Users/surface/Documents/CLASSES/24fall/math 421/homework/hw2/ps2.tex" "ps2.pdf" "ps2" 1726529057.89317 0
+["pdflatex"] 1726529320.49317 "c:/Users/surface/Documents/CLASSES/24fall/math 421/homework/hw2/ps2.tex" "ps2.pdf" "ps2" 1726529322.12853 0
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1725437738 1004 54797486969f23fa377b128694d548df ""
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1725437738 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1725437738 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -77,10 +77,10 @@
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725437786 94259 aec9939469efac8f0cf917369f632359 ""
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1725437802 6829294 46993b1c117bf8002a2acba8bd3dae29 ""
   "c:/Users/surface/AppData/Roaming/TinyTeX/texmf.cnf" 1725437716 903 164c5b127cd0d6dc91abad2f62421ea2 ""
-  "c:/Users/surface/Documents/CLASSES/24fall/math 421/homework/hw2/ps2.tex" 1726529055 6862 e220f40225d2055fb84bc3d78e7b6581 ""
-  "ps2.aux" 1726529057 206 a802f3de824a98b64d3bedf3b51411d0 "pdflatex"
-  "ps2.out" 1726529057 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "ps2.tex" 1726529055 6862 e220f40225d2055fb84bc3d78e7b6581 ""
+  "c:/Users/surface/Documents/CLASSES/24fall/math 421/homework/hw2/ps2.tex" 1726529319 6864 98a90537f9050c6b3d79a8aad6dd1dcc ""
+  "ps2.aux" 1726529321 206 a802f3de824a98b64d3bedf3b51411d0 "pdflatex"
+  "ps2.out" 1726529321 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ps2.tex" 1726529319 6864 98a90537f9050c6b3d79a8aad6dd1dcc ""
   (generated)
   "ps2.aux"
   "ps2.log"
