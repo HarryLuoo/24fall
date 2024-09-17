@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1726539992.69207 "c:/Users/26790/Documents/1classes/24fall/math 421/homework/hw2/ps2.tex" "ps2.pdf" "ps2" 1726539993.51608 0
-  "c:/Users/26790/Documents/1classes/24fall/math 421/homework/hw2/ps2.tex" 1726539991 6869 e151c735931373daeb58437e53c52280 ""
+["pdflatex"] 1726540619.61574 "c:/Users/26790/Documents/1classes/24fall/math 421/homework/hw2/ps2.tex" "ps2.pdf" "ps2" 1726540620.44477 0
+  "c:/Users/26790/Documents/1classes/24fall/math 421/homework/hw2/ps2.tex" 1726540619 6880 51c0623187f943806b1a7c7e045cc9e7 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1725593604 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1725592512 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1725592512 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -79,9 +79,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1726437674 5543950 2aa73a438b7054b2327b796fbe5f4275 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1726437807 8239373 ec44aafe8ff2103eaebf1a191668fd39 ""
   "c:/texlive/2024/texmf.cnf" 1726437662 713 e69b156964470283e0530f5060668171 ""
-  "ps2.aux" 1726539993 206 a802f3de824a98b64d3bedf3b51411d0 "pdflatex"
-  "ps2.out" 1726539993 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "ps2.tex" 1726539991 6869 e151c735931373daeb58437e53c52280 ""
+  "ps2.aux" 1726540620 206 a802f3de824a98b64d3bedf3b51411d0 "pdflatex"
+  "ps2.out" 1726540620 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ps2.tex" 1726540619 6880 51c0623187f943806b1a7c7e045cc9e7 ""
   (generated)
   "ps2.aux"
   "ps2.log"
