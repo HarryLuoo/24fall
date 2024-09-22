@@ -54,16 +54,9 @@ $ display(    4.136×10^-7 "eV")$
 #line(length: 100%)
 
 = 3.25
-* The orbiting space shuttle moves around Earth well above 99 percent of the atmosphere,
-yet it still accumulates an electric charge on its skin due, in part, to the loss of electrons caused
-by the photoelectric effect with sunlight. Suppose the skin of the shuttle is coated with Ni,
-which has a relatively large work function $Phi = 4.87 "eV"$  at the temperatures encountered in
-orbit. (a) What is the maximum wavelength in the solar spectrum that can result in the emission
-of photoelectrons from the shuttle’s skin? (b) What is the maximum fraction of the total power
-falling on the shuttle that could potentially produce photoelectrons?*
 
 - (a)
-By the potoelectric effect equation, at therashold wavelength, we have $ 
+By the photoelectric effect equation, at therashold wavelength, we have $ 
      Phi = h f_t = h c/ lambda_t quad => lambda_t = (h c)/(Phi) = (1.24e hyph.minus 6)/(4.87 )"m" = 
 #rect(inset: 8pt)[
 $ display(     2.546 e hyph.minus 7 m)$
@@ -83,23 +76,40 @@ $
 Total energy is given by $ 
     R = sigma T^(4) = sigma * 5800"K"^(4) approx 6.42 e 7 quad W slash m^2 
 $ 
-Thus the fractional power is $ 
+Thus the maximal fractional power is $ 
      (R')/(R) approx 1.4 e hyph.minus 4 
 $ 
-
+#line(length: 100%)
 
 
 = 3.26
 
+- (a)
+Using the photoelectric equation,we can find threshold freq and wavelength, $f_t, lambda_t$ as follows, $ 
+    Phi = h f_t = frac(h c , lambda_t) quad => f_t = frac(Phi , h) , quad lambda_t = frac(h c  , Phi) 
+$ 
 
+- (b,c,d)
+  The stopping potential can be found as follows, $ 
+      e V_0 = frac(h c , lambda) - Phi quad => V_0 = frac(h c , lambda e ) - frac(Phi , e)   .
+  $ 
+  
+For $lambda = 300$nm: $
+  V_0 = frac(h c , e* 300 e hyph.minus 9 "m" ) -frac(1.9 "eV" ,e ) =           
+$  
+
+#line(length: 100%)
 = 3.28
 
 
+#line(length: 100%)
 = 3.31
 
 
+#line(length: 100%)
 = 3.32
 
 
+#line(length: 100%)
 = 3.42
 
