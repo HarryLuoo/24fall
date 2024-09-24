@@ -101,7 +101,7 @@ Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ b
 \end{problem}
 \begin{solution}
     \begin{enumerate}
-        \item \textbf{\( f(A_1 \cup A_2) = f(A_1) \cup f(A_2) \)}
+        \item 
         
         \begin{proof}
             \(\subseteq\): Let \( y \in f(A_1 \cup A_2) \).By definition of image, \(\exists x \in A_1 \cup A_2\) s.t. \( f(x) = y \). \\
@@ -119,7 +119,7 @@ Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ b
         \end{proof}
         \bigbreak
         
-        \item \textbf{\( f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2) \)}
+        \item 
         
         \begin{proof}
             Let \( y \in f(A_1 \cap A_2) \). Then \(\exists x \in A_1 \cap A_2\) s.t. \( f(x) = y \). \\
@@ -128,26 +128,29 @@ Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ b
             Therefore, \( f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2) \).
         \end{proof}  
         \bigbreak
-        \item \textbf{\( f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2) \)}
+        \item 
         
         \begin{proof}
             \(\subseteq\): Let \( x \in f^{-1}(B_1 \cup B_2) \). Then \( f(x) \in B_1 \cup B_2 \), so \( f(x) \in B_1 \) or \( f(x) \in B_2 \). \\
             Hence, \( x \in f^{-1}(B_1) \) or \( x \in f^{-1}(B_2) \), implying \( x \in f^{-1}(B_1) \cup f^{-1}(B_2) \).\\
-            
+            Thus $ f^{-1} (B_1 \cup B_2) \subseteq f^{-1}(B_1) \cup f^{-1}(B_2) $ \\
+
             \(\supseteq\): Let \( x \in f^{-1}(B_1) \cup f^{-1}(B_2) \). \\
             Then \( x \in f^{-1}(B_1) \) or \( x \in f^{-1}(B_2) \), meaning \( f(x) \in B_1 \) or \( f(x) \in B_2 \). \\
-            Thus, \( f(x) \in B_1 \cup B_2 \) and \( x \in f^{-1}(B_1 \cup B_2) \).
-            
+            Thus, \( f(x) \in B_1 \cup B_2 \) and \( x \in f^{-1}(B_1 \cup B_2) \).\\
+            So $ f^{-1}(B_1) \cup f^{-1}(B_2) \subseteq f^{-1} (B_1 \cup B_2)   $ \\
             Therefore, \( f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2) \).
         \end{proof}
         
         \bigbreak
-        \item \textbf{\( f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2) \)}
+        \item 
         
         \begin{proof}
             \(\subseteq\): Let \( x \in f^{-1}(B_1 \cap B_2) \). Then \( f(x) \in B_1 \cap B_2 \), so \( f(x) \in B_1 \) and \( f(x) \in B_2 \). Hence, \( x \in f^{-1}(B_1) \) and \( x \in f^{-1}(B_2) \), implying \( x \in f^{-1}(B_1) \cap f^{-1}(B_2) \).\\
-            
-            \(\supseteq\): Let \( x \in f^{-1}(B_1) \cap f^{-1}(B_2) \). Then \( f(x) \in B_1 \) and \( f(x) \in B_2 \), so \( f(x) \in B_1 \cap B_2 \). Thus, \( x \in f^{-1}(B_1 \cap B_2) \).
+            So, \( f^{-1}(B_1 \cap B_2) \subseteq  f^{-1}(B_1) \cap f^{-1}(B_2) \)\\
+
+            \(\supseteq\): Let \( x \in f^{-1}(B_1) \cap f^{-1}(B_2) \). Then \( f(x) \in B_1 \) and \( f(x) \in B_2 \), so \( f(x) \in B_1 \cap B_2 \). Thus, \( x \in f^{-1}(B_1 \cap B_2) \).\\
+            Therefore, \( f^{-1}(B_1) \cap f^{-1}(B_2) \subseteq f^{-1}(B_1 \cap B_2) \).\\
             
             Therefore, \( f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2) \).
         \end{proof}
@@ -161,9 +164,64 @@ Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ b
 Let $f:A\to B$ be a function.  Prove that $f$ is injective if and only if $f(A_1\cap A_2) = f(A_1) \cap f(A_2)$ for all subsets $A_1,A_2\subseteq A$.
 \end{problem}
 \begin{solution}
+    We will prove the equivalence by demonstrating both implications.
 
+    \paragraph{1. \( f \) is injective \( \Rightarrow \) \( \forall A_1, A_2 \subseteq A,\, f(A_1 \cap A_2) = f(A_1) \cap f(A_2) \)}
     
-
+    \begin{proof}
+    Assume \( f \) is injective.
+    
+    \paragraph{\( \subseteq \)}
+    
+    Let \( y \in f(A_1 \cap A_2) \). Then \( \exists x \in A_1 \cap A_2 \) such that \( f(x) = y \). Since \( x \in A_1 \) and \( x \in A_2 \), it follows that \( y \in f(A_1) \) and \( y \in f(A_2) \). Therefore, \( y \in f(A_1) \cap f(A_2) \).
+    
+    \paragraph{\( \supseteq \)}
+    
+    Let \( y \in f(A_1) \cap f(A_2) \). Then \( \exists x_1 \in A_1 \) and \( \exists x_2 \in A_2 \) such that \( f(x_1) = y \) and \( f(x_2) = y \). Since \( f \) is injective, \( x_1 = x_2 \). Let \( x = x_1 = x_2 \). Then \( x \in A_1 \cap A_2 \), and hence \( y = f(x) \in f(A_1 \cap A_2) \).
+    
+    
+    
+    Thus, \( f(A_1 \cap A_2) = f(A_1) \cap f(A_2) \) when \( f \) is injective.
+    \end{proof}
+    
+    \paragraph{2. \( \forall A_1, A_2 \subseteq A,\, f(A_1 \cap A_2) = f(A_1) \cap f(A_2) \) \( \Rightarrow \) \( f \) is injective}
+    
+    \begin{proof}
+    Assume \( \forall A_1, A_2 \subseteq A,\, f(A_1 \cap A_2) = f(A_1) \cap f(A_2) \). We aim to show that \( f \) is injective.
+    
+    Suppose, for contradiction, that \( f \) is not injective. Then \( \exists x_1, x_2 \in A \) with \( x_1 \neq x_2 \) and \( f(x_1) = f(x_2) = y \).
+    
+    Consider the subsets \( A_1 = \{x_1\} \) and \( A_2 = \{x_2\} \).
+    
+    
+    
+    Since \( x_1 \neq x_2 \),
+    \[
+    A_1 \cap A_2 = \emptyset.
+    \]
+    Thus,
+    \[
+    f(A_1 \cap A_2) = f(\emptyset) = \emptyset.
+    \]
+    
+    
+    \[
+    f(A_1) = \{f(x_1)\} = \{y\}, \quad f(A_2) = \{f(x_2)\} = \{y\},
+    \]
+    so
+    \[
+    f(A_1) \cap f(A_2) = \{y\} \cap \{y\} = \{y\}.
+    \]
+    
+    We have
+    \[
+    f(A_1 \cap A_2) = \emptyset \neq \{y\} = f(A_1) \cap f(A_2),
+    \]
+    which contradicts the assumption.
+    Therefore, \( f \) must be injective.
+    \end{proof}
+    
+    
 
 
 \end{solution}
@@ -178,7 +236,37 @@ Let $f:A\to B$ be a function.  Prove that the following two statements are equiv
 \end{enumerate}
 \end{problem}
 \begin{solution}
-(Type your solution to problem 4 here.)
+
+    \textbf{(1) implies (2):}
+
+    Assume \( f \) is surjective. Let \( C \) be an arbitrary set, and let \( g, h: B \to C \) satisfy \( g \circ f = h \circ f \).
+    
+    For any \( b \in B \), since \( f \) is surjective, there exists \( a \in A \) such that \( f(a) = b \). Therefore,
+    \[
+    g(b) = g(f(a)) = (g \circ f)(a) = (h \circ f)(a) = h(f(a)) = h(b).
+    \]
+    Hence, \( g = h \).
+    
+    \textbf{(2) implies (1):}
+    
+    Assume statement 2 holds. Suppose, for contradiction, that \( f \) is not surjective. Then there exists \( b_0 \in B \) such that \( b_0 \notin \text{Image}(f) \). We will use this element to construct specific functions \( g \) and \( h \) that satisfy the premise of statement 2 but are not equal, leading to a contradiction:
+    
+    Let \( C = \{0, 1\} \) and define the functions \( g, h: B \to C \) as follows:
+    \[
+    g(b) = 
+    \begin{cases}
+    0 & \text{if } b = b_0, \\
+    1 & \text{otherwise},
+    \end{cases}
+    \quad
+    h(b) = 1 \text{ for all } b \in B.
+    \]
+    Since \( b_0 \notin \text{Image}(f) \), for all \( a \in A \), \( g(f(a)) = 1 = h(f(a)) \). Thus, \( g \circ f = h \circ f \). However, \( g \neq h \) because \( g(b_0) = 0 \) while \( h(b_0) = 1 \), which contradicts the uniqueness condition.
+    
+    Therefore, \( f \) must be surjective.
+    
+
+
 \end{solution}
 
 % Problem 5 -----------------------------------------------------
@@ -187,7 +275,53 @@ Let $f:A\to B$ be a function.  Prove that the following two statements are equiv
 Let $A$ be a nonempty set and $f:A\to A$ a function.  We call $f$ an \emph{involution} if $(f\circ f)(a) = a$ for all $a\in A$.  Prove that if $f:A\to A$ is an involution, then $f$ is bijective.  What is the inverse function $f^{-1}$ in terms of $f$?
 \end{problem}
 \begin{solution}
-(Type your solution to problem 5 here.)
+    \textbf{1. Injectivity}
+    
+    Assume that for some \( a_1, a_2 \in A \),
+    $$
+    f(a_1) = f(a_2).
+    $$
+    Applying \( f \) to both sides of the equation:
+    $$
+    f(f(a_1)) = f(f(a_2)).
+    $$
+    Given that \( f \) is an involution:
+    $$
+    (f \circ f)(a_1) = (f \circ f)(a_2) \\
+    a_1 = a_2.
+    $$
+    Thus, \( f \) is injective.
+    
+    \textbf{2. Surjectivity}
+    
+    Take any element \( b \in A \). Since \( f \) is an involution:
+    $$
+    f(f(b)) = b.
+    $$
+    Let \( a = f(b) \). Then:
+    $$
+    f(a) = f(f(b)) = b.
+    $$
+    Therefore, for every \( b \in A \), there exists an \( a \in A \) (specifically, \( a = f(b) \)) such that \( f(a) = b \). Therefore \( f \) is surjective.
+    
+    Since \( f \) is both injective and surjective, it is bijective.
+    
+    \textbf{Inverse Function}
+    
+    By definition, the inverse function \( f^{-1} \) satisfies:
+    $$
+    f^{-1}(f(a)) = a \quad \text{and} \quad f(f^{-1}(a)) = a \quad \text{for all} \quad a \in A.
+    $$
+    Given that \( f \) is an involution:
+    $$
+    f(f(a)) = a.
+    $$
+    Comparing the two conditions, we observe that \( f \) itself satisfies the properties required of an inverse function. Therefore:
+    $$
+    f^{-1} = f.
+    $$
+    
+    
 \end{solution}
 
 % Problem 6 -----------------------------------------------------
@@ -201,7 +335,76 @@ Prove or disprove the following statements:
 (Hint:  In order to disprove a statement, you must prove that the negation of the statement is true.)
 \end{problem}
 \begin{solution}
-(Type your solution to problem 6 here.)
+
+    \paragraph{1. The Set \( \{ x \in \mathbb{R} \mid x \geq 2 \} \) is an Interval}
+    
+    \textbf{Proof}:
+   
+    To confirm that \( S = [2, \infty) \) is indeed an interval, we verify the interval definition.
+    
+    \begin{enumerate}
+        \item \textbf{Take any two elements \( a, b \in S \) with \( a < b \)}:
+        \[
+        a, b \geq 2 \quad \text{and} \quad a < b.
+        \]
+        
+        \item \textbf{Consider any \( c \in \mathbb{R} \) such that \( a < c < b \)}:
+        \[
+        a < c < b \quad \text{and} \quad a \geq 2 \quad \Rightarrow \quad c > a \geq 2 \quad \Rightarrow \quad c \geq 2.
+        \]
+        
+        \item \textbf{Thus}, \( c \in S \) since \( c \geq 2 \).
+    \end{enumerate}
+    
+    Since every number between any two elements of \( S \) is also contained within \( S \), \( S \) satisfies the definition of an interval.
+    
+    \textbf{Conclusion}: The set \( \{ x \in \mathbb{R} \mid x \geq 2 \} \) is an interval, specifically the closed and unbounded interval \( [2, \infty) \).
+    
+    \subsection*{2. The Set \( \{ x \in \mathbb{R} \mid x \neq 2 \} \) is an Interval}
+    
+    \textbf{Statement}: The set \( T = \{ x \in \mathbb{R} \mid x \neq 2 \} \) is an interval.
+    
+    \textbf{Proof}:
+    
+    We aim to determine whether the set \( T = \mathbb{R} \setminus \{2\} \) satisfies the definition of an interval.
+    
+    \textbf{Assumption for Contradiction}: Suppose \( T \) is an interval.
+    
+    \textbf{Analysis}:
+    
+    1. **Structure of \( T \)**:
+        \[
+        T = (-\infty, 2) \cup (2, \infty)
+        \]
+        This is the real line with the single point \( x = 2 \) removed.
+    
+    2. **Interval Properties**:
+        - For \( T \) to be an interval, it must be connected; that is, there should be no "gaps" in \( T \).
+        - However, \( T \) explicitly excludes the point \( x = 2 \), creating a discontinuity.
+    
+    3. **Violation of Interval Definition**:
+        - Consider two points \( a = 1 \) and \( b = 3 \) in \( T \), with \( a < 2 < b \).
+        - According to the interval definition, every \( c \) such that \( a < c < b \) must be in \( T \).
+        - Take \( c = 2 \), which satisfies \( a < c < b \), but \( c = 2 \notin T \).
+        - This contradicts the requirement that all intermediate points must be included in the interval.
+    
+    \textbf{Conclusion}: The set \( T = \{ x \in \mathbb{R} \mid x \neq 2 \} \) is not an interval because it fails to include all real numbers between certain pairs of its elements, specifically excluding the point \( x = 2 \).
+    
+    \textbf{Summary}
+    
+    \begin{enumerate}
+        \item \textbf{True}: The set \( \{ x \in \mathbb{R} \mid x \geq 2 \} \) is an interval, precisely the closed and unbounded interval \( [2, \infty) \).
+        \item \textbf{False}: The set \( \{ x \in \mathbb{R} \mid x \neq 2 \} \) is not an interval, as it excludes the point \( x = 2 \), resulting in a disconnected set.
+    \end{enumerate}
+    
+    \textbf{Final Answer}:
+    
+    \begin{enumerate}
+        \item \textbf{True}. The set \( \{ x \in \mathbb{R} \mid x \geq 2 \} \) is the interval \( [2, \infty) \).
+        \item \textbf{False}. The set \( \{ x \in \mathbb{R} \mid x \neq 2 \} \) is not an interval.
+    \end{enumerate}
+    
+
 \end{solution}
 
 \end{document}
