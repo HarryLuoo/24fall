@@ -43,7 +43,7 @@ $
 #line(length: 100%)
 = Photoelectric effect
 - Energy of a photon $ 
-    E_p = h f = Phi + E_k 
+    E_p = h f = frac(h c , lambda) =Phi + E_k 
 $ 
 where $Phi$ is the work function of the material, $E_k$ is the kinetic energy of the emitted electron at the surface of the material. $h = 6.26 e hyph.minus 34$ is the Planck constant.
 
@@ -54,5 +54,27 @@ where $Phi$ is the work function of the material, $E_k$ is the kinetic energy of
  
   
 - stopping potential
-   $ V_"stop" = (E_(k,m))/(e) = (h f - Phi)/(e), $  the minimum potential required to stop the emitted electron.
-- Threshold frequency $f_"tr" = (Phi)/(h)$ 
+   $ e V_"stop" = frac(h c  , lambda)- Phi  $  the minimum potential required to stop the emitted electron. 
+- Threshold frequency& wavelength: set $E_k = 0$: $ 
+    f_t = frac(Phi , h) , quad lambda_t = frac(h c , Phi) 
+$ 
+   
+
+= Blackbody radiation
+- Stefan-Boltzmann law:  $ 
+    R = sigma  T^4.
+$Where $R$ is the power radiated per unit area, or energy density. T is temprature in  Kelvin, $sigma = 5.67 e hyph.minus 8 ("W"dot"m"^( hyph.minus 2) dot"K"^( hyph.minus 4))$ is the Stefan-Boltzmann constant.
+
+- Wien's displacement law: $ 
+    lambda_max T = b
+$ where $b = 2.89 e hyph.minus 3 ("m" dot"K")$ is the Wien's constant, and $lambda_max$ is the wavelength at which the blackbody radiation is maximum, and T is the temprature in Kelvin of the blackbody.
+
+- Rayleigh-Jeans law: $ 
+    R(lambda) = 1/4 c u(lambda) ,\
+    u(lambda) = 8 pi k T lambda^(-4)
+$ WHere $R$ is radiation power per unit area, or energy density, $u$ is the energy density of radiation, $c$ is the speed of light, and $k = 8.617 e hyph.minus 5 "eV/K" = 1.38 e hyph.minus 23 J dot K^-1 $ is the Boltzmann constatn This law is valid for long wavelength, but it diverges at short wavelength.
+- Planck's law: $ 
+   u(lambda) = frac(8 pi h c lambda^(-5) , e^(h c slash lambda k T) - 1  ) 
+$ where $k = 1.38 e hyph.minus 23 ("J" dot"K"^( hyph.minus 1))$ is the Boltzmann constant, $h$ is the Planck constant, $T$ is the temprature in Kelvin of the blackbody.
+
+
