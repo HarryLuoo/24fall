@@ -1,0 +1,207 @@
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb}
+\usepackage{parskip} 
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+% Tired of typing \mathbb{...} every time?  Here's a shortcut:
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries Math 421, Section 1 
+\\ 
+Homework 3
+\\ 
+Harry Luo % Fill in your name here
+\\ [24pt] 
+\end{center}
+
+% Problem 1 -----------------------------------------------------
+\begin{problem}
+Determine whether each of the following functions are injective, surjective, and bijective, and prove your answer.
+\begin{enumerate}
+\item $f:\Z\to\Z$, $f(x) = 2x$.  % Here, "\Z" is a command defined in the preamble, to output "\mathbb{Z}"
+\item $g:\R\to\R$, $g(x) = 2x$.  % Same for "\R" here
+\end{enumerate}
+\end{problem}
+\begin{solution} 
+\begin{enumerate}
+\item Injectivity: Suppose $ \exists x_1, x_2 \in \Z, s.t. f(x_1) = f(x_2)  $ , want to show: $  x_1 = x_2 .$ 
+    \begin{align} 
+        f(x_1) = f(x_2) \implies 2x_1 = 2x_2 \implies x_1 = x_2. 
+    \end{align}
+    
+    The function is thus injective.\\
+    
+Surjectivity: Want to show $ \forall y \in \Z, \exists x \in \Z \; s.t. \; f(x) = y . $ Suppose $x, y \in \Z $, and let $ f(x) = y $. i.e., \begin{align} 
+    2x = y \implies x = \frac{y}{2} \in \Z. 
+\end{align}
+However, $ \frac{y}{2} \in \Z $ only if $ y $ is even. So the above is not true for an arbiturary $ y \in \Z $, contradictory to our assumption. Thus, the function is not surjective.
+\\
+
+Collecting the above, the function is not bijective.
+\\
+
+\item Injectivity: Suppose $ \exists x_1, x_2 \in \R, s.t. g(x_1) = g(x_2)  $ , want to show: $  x_1 = x_2 .$ 
+    \begin{align} 
+        g(x_1) = g(x_2) \implies 2x_1 = 2x_2 \implies x_1 = x_2. 
+    \end{align}
+    
+    The function is thus injective.\\
+
+
+Surejectivity: Suppose $ y \in \R $, we want to find $ x \in \R, \; s.t.\; g(x) = y $.
+
+\begin{align} 
+    2x = y \implies x = \frac{y}{2} \in \R.
+\end{align}
+So the function is surjective.\\
+
+Collecting the above, the function $ g(x) $ is bijective.
+
+\end{enumerate} 
+
+
+\end{solution}
+
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ be subsets.  Prove the following statements:
+\begin{enumerate}
+\item $f(A_1\cup A_2) = f(A_1) \cup f(A_2)$.
+\item $f(A_1\cap A_2) \subseteq f(A_1) \cap f(A_2)$.
+\item $f^{-1}(B_1\cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2)$.
+\item $f^{-1}(B_1\cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2)$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+    \begin{enumerate}
+        \item \textbf{\( f(A_1 \cup A_2) = f(A_1) \cup f(A_2) \)}
+        
+        \begin{proof}
+            \(\subseteq\): Let \( y \in f(A_1 \cup A_2) \).By definition of image, \(\exists x \in A_1 \cup A_2\) s.t. \( f(x) = y \). \\
+            Hence, \( x \in A_1 \) or \( x \in A_2 \). Thus, \( y \in f(A_1) \) or \( y \in f(A_2) \), implying \( y \in f(A_1) \cup f(A_2) \).
+
+            Therefore, $ f(A_1 \cup A_2) \subseteq f(A_1) \cup f(A_2)$ 
+            \\
+
+            \(\supseteq\): Let \( y \in f(A_1) \cup f(A_2) \). Then \( y \in f(A_1) \) or \( y \in f(A_2) \). \\
+            Thus, \(\exists x \in A_1\) or \( x \in A_2 \) s.t. \( f(x) = y \). \\
+            Therefore, \( x \in A_1 \cup A_2 \) and \( y = f(x) \in f(A_1 \cup A_2) \).\\
+            Thus, \(f(A_1) \cup f(A_2) \subseteq f(A_1 \cup A_2)\).\\
+
+            Hence, \( f(A_1 \cup A_2) = f(A_1) \cup f(A_2) \).
+        \end{proof}
+        \bigbreak
+        
+        \item \textbf{\( f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2) \)}
+        
+        \begin{proof}
+            Let \( y \in f(A_1 \cap A_2) \). Then \(\exists x \in A_1 \cap A_2\) s.t. \( f(x) = y \). \\
+            Since \( x \in A_1 \) and \( x \in A_2 \), \( y \in f(A_1) \) and \( y \in f(A_2) \). Thus, \( y \in f(A_1) \cap f(A_2) \).
+            
+            Therefore, \( f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2) \).
+        \end{proof}  
+        \bigbreak
+        \item \textbf{\( f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2) \)}
+        
+        \begin{proof}
+            \(\subseteq\): Let \( x \in f^{-1}(B_1 \cup B_2) \). Then \( f(x) \in B_1 \cup B_2 \), so \( f(x) \in B_1 \) or \( f(x) \in B_2 \). \\
+            Hence, \( x \in f^{-1}(B_1) \) or \( x \in f^{-1}(B_2) \), implying \( x \in f^{-1}(B_1) \cup f^{-1}(B_2) \).\\
+            
+            \(\supseteq\): Let \( x \in f^{-1}(B_1) \cup f^{-1}(B_2) \). \\
+            Then \( x \in f^{-1}(B_1) \) or \( x \in f^{-1}(B_2) \), meaning \( f(x) \in B_1 \) or \( f(x) \in B_2 \). \\
+            Thus, \( f(x) \in B_1 \cup B_2 \) and \( x \in f^{-1}(B_1 \cup B_2) \).
+            
+            Therefore, \( f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2) \).
+        \end{proof}
+        
+        \bigbreak
+        \item \textbf{\( f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2) \)}
+        
+        \begin{proof}
+            \(\subseteq\): Let \( x \in f^{-1}(B_1 \cap B_2) \). Then \( f(x) \in B_1 \cap B_2 \), so \( f(x) \in B_1 \) and \( f(x) \in B_2 \). Hence, \( x \in f^{-1}(B_1) \) and \( x \in f^{-1}(B_2) \), implying \( x \in f^{-1}(B_1) \cap f^{-1}(B_2) \).\\
+            
+            \(\supseteq\): Let \( x \in f^{-1}(B_1) \cap f^{-1}(B_2) \). Then \( f(x) \in B_1 \) and \( f(x) \in B_2 \), so \( f(x) \in B_1 \cap B_2 \). Thus, \( x \in f^{-1}(B_1 \cap B_2) \).
+            
+            Therefore, \( f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2) \).
+        \end{proof}
+    \end{enumerate}
+    
+\end{solution}
+
+% Problem 3 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function.  Prove that $f$ is injective if and only if $f(A_1\cap A_2) = f(A_1) \cap f(A_2)$ for all subsets $A_1,A_2\subseteq A$.
+\end{problem}
+\begin{solution}
+
+    
+
+
+
+\end{solution}
+
+% Problem 4 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function.  Prove that the following two statements are equivalent:
+\begin{enumerate}
+\item The function $f$ is surjective.
+\item For every set $C$ and for any functions $g : B \to C$ and $h : B \to C$ such that $g \circ f = h \circ f$, we have $g = h$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 4 here.)
+\end{solution}
+
+% Problem 5 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $A$ be a nonempty set and $f:A\to A$ a function.  We call $f$ an \emph{involution} if $(f\circ f)(a) = a$ for all $a\in A$.  Prove that if $f:A\to A$ is an involution, then $f$ is bijective.  What is the inverse function $f^{-1}$ in terms of $f$?
+\end{problem}
+\begin{solution}
+(Type your solution to problem 5 here.)
+\end{solution}
+
+% Problem 6 -----------------------------------------------------
+\newpage
+\begin{problem}
+Prove or disprove the following statements:
+\begin{enumerate}
+\item The set $\{ x\in\R : x\geq 2 \}$ is an interval.
+\item The set $\{ x\in\R : x\neq 2 \}$ is an interval.
+\end{enumerate}
+(Hint:  In order to disprove a statement, you must prove that the negation of the statement is true.)
+\end{problem}
+\begin{solution}
+(Type your solution to problem 6 here.)
+\end{solution}
+
+\end{document}
