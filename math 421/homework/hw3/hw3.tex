@@ -1,0 +1,114 @@
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb}
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+% Tired of typing \mathbb{...} every time?  Here's a shortcut:
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries Math 421, Section 1 
+\\ 
+Homework 3
+\\ 
+(Name) % Fill in your name here
+\\ [24pt] 
+\end{center}
+
+% Problem 1 -----------------------------------------------------
+\begin{problem}
+Determine whether each of the following functions are injective, surjective, and bijective, and prove your answer.
+\begin{enumerate}
+\item $f:\Z\to\Z$, $f(x) = 2x$.  % Here, "\Z" is a command defined in the preamble, to output "\mathbb{Z}"
+\item $g:\R\to\R$, $g(x) = 2x$.  % Same for "\R" here
+\end{enumerate}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 1 here.)
+\end{solution}
+
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function and $A_1,A_2\subseteq A$ and $B_1,B_2\subseteq B$ be subsets.  Prove the following statements:
+\begin{enumerate}
+\item $f(A_1\cup A_2) = f(A_1) \cup f(A_2)$.
+\item $f(A_1\cap A_2) \subseteq f(A_1) \cap f(A_2)$.
+\item $f^{-1}(B_1\cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2)$.
+\item $f^{-1}(B_1\cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2)$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 2 here.)
+\end{solution}
+
+% Problem 3 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function.  Prove that $f$ is injective if and only if $f(A_1\cap A_2) = f(A_1) \cap f(A_2)$ for all subsets $A_1,A_2\subseteq A$.
+\end{problem}
+\begin{solution}
+(Type your solution to problem 3 here.)
+\end{solution}
+
+% Problem 4 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $f:A\to B$ be a function.  Prove that the following two statements are equivalent:
+\begin{enumerate}
+\item The function $f$ is surjective.
+\item For every set $C$ and for any functions $g : B \to C$ and $h : B \to C$ such that $g \circ f = h \circ f$, we have $g = h$.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+(Type your solution to problem 4 here.)
+\end{solution}
+
+% Problem 5 -----------------------------------------------------
+\newpage
+\begin{problem}
+Let $A$ be a nonempty set and $f:A\to A$ a function.  We call $f$ an \emph{involution} if $(f\circ f)(a) = a$ for all $a\in A$.  Prove that if $f:A\to A$ is an involution, then $f$ is bijective.  What is the inverse function $f^{-1}$ in terms of $f$?
+\end{problem}
+\begin{solution}
+(Type your solution to problem 5 here.)
+\end{solution}
+
+% Problem 6 -----------------------------------------------------
+\newpage
+\begin{problem}
+Prove or disprove the following statements:
+\begin{enumerate}
+\item The set $\{ x\in\R : x\geq 2 \}$ is an interval.
+\item The set $\{ x\in\R : x\neq 2 \}$ is an interval.
+\end{enumerate}
+(Hint:  In order to disprove a statement, you must prove that the negation of the statement is true.)
+\end{problem}
+\begin{solution}
+(Type your solution to problem 6 here.)
+\end{solution}
+
+\end{document}
