@@ -335,8 +335,30 @@ Prove or disprove the following statements:
 (Hint:  In order to disprove a statement, you must prove that the negation of the statement is true.)
 \end{problem}
 \begin{solution}
+  \textbf{(a)}
 
+    We express the set in interval notation:
+    $$
+    S = [2, \infty)
+    $$
     
+    
+    Let \( a, b \in S \) with \( a < b \). Since \( a \geq 2 \) and \( b \geq 2 \), for any \( c \) such that \( a < c < b \), it follows that \( c \geq 2 \). Thus, \( c \in S \).
+    
+    Therefore, \( S \) satisfies the definition of an interval.
+    
+    \textbf{(b)} Consider the negation of the original statement, that the set is not an interval. 
+    
+    Assume, for contradiction, that the set is an interval. Expressing the set in interval notation:
+    $$
+    T = (-\infty, 2) \cup (2, \infty)
+    $$
+    
+    This implies that \( T \) is the union of two disjoint intervals. However, for \( T \) to be an interval, it must be a single continuous set without gaps. 
+    
+    Consider \( a = 1 \in (-\infty, 2) \) and \( b = 3 \in (2, \infty) \). The point \( c = 2 \) satisfies \( a < c < b \) but \( c \notin T \), which contradicts the interval property that all points between \( a \) and \( b \) must lie within the set.
+    
+    We have thus proven the validity of the negation of our original statement. Therefore, \( T \) is not an interval.    
 
 \end{solution}
 
