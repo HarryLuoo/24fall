@@ -78,3 +78,14 @@ $ WHere $R$ is radiation power per unit area, or energy density, $u$ is the ener
 $ where $k = 1.38 e hyph.minus 23 ("J" dot"K"^( hyph.minus 1))$ is the Boltzmann constant, $h$ is the Planck constant, $T$ is the temprature in Kelvin of the blackbody.
 
 
+= Schrodinger equation
+- _example_: an electronmoving in a thin metal wire is a reasonalble approximation of a particle in a one dimensional infinite well. the potential inside the wire is constant on average but risese sharply at each end. suppose the electron is in a wire 1.0cm long, 
+    - (a) compute the ground state energy for the electron
+    - (b)what would be the probability of finding it in a very narrow region $Delta x = 0.01 L$ wide centered at $x = 5L/8$?
+  Ground staet energy:$ 
+      E_1 = frac(h^2 , 8 m L ^2 )  = 
+  $ 
+   probability: $ 
+       P =  
+   $ 
+   

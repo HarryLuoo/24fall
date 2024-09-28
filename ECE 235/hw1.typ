@@ -71,7 +71,7 @@ As suggested on Piazza, we use mid-point approximation to approximate the integr
   u(127.3"nm") med  times (254.6 "nm") = (8 pi h c (127.3 e hyph.minus 9 "m" )^(-5))/(e^(h c slash ( k times  5800"K"  times  127.3 e hyph.minus 9"m" ) )-1)  times  (254.6 e hyph.minus 9"m") approx 1.23e hyph.minus 4 quad J slash m^3
 $ 
 Energy density is thus approximately $ 
-    R' = 1/c (1.23 e hyph.minus 4)  quad J slash m^3
+    R' = c/4 (1.23 e hyph.minus 4)  quad J slash m^3
 $ 
 Total energy is given by $ 
     R = sigma T^(4) = sigma  times  5800"K"^(4) approx 6.42 e 7 quad W slash m^2 
