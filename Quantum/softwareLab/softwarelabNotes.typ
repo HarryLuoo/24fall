@@ -16,13 +16,12 @@
 #set math.equation(numbering:"1")
 #show math.equation: set text(11pt)
 #set math.cases(gap: 0.2em)
-= Software Lab 1: Notes
+#heading(outlined: false)[Notes for Software Lab]
 Harry Luo\
 #line(length: 100%, stroke: (thickness: 2pt))
 #set heading(numbering: "1.1")
 #outline(indent: auto,)
 #line(length: 100%)
 
-
- = QuTip Basics
-
+= Spin Dynamics
+== Spin Hamiltonian

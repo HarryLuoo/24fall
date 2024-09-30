@@ -1,0 +1,6 @@
+PWD c:/Users/26790/Documents/1classes/24fall/math 421/notes
+INPUT c:/texlive/2024/texmf.cnf
+INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/26790/Documents/1classes/24fall/math 421/notes/review1.tex
+OUTPUT review1.log
