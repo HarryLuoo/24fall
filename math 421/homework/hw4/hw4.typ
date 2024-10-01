@@ -76,10 +76,34 @@ Let $ epsilon > 0$ . For each of the following functions $ RR -> RR$ and numbers
 + $ h(x)= f(x)+g(x) "and" l = 2.$ hint: in the proof of the corresponding limit laws, we saw how to pick this $ delta$ based on our answers for (a) and (b).
 #line(length: 100%)
 == solution:
-1. 
+1. For any arbitrary $ epsilon$ , there exists a $ delta = min{1,epsilon slash 15}$, s.t. $ 0 < abs(x-1)< delta$, 
+   so $ 0<abs(x-1)<1 =>cases(abs(x+1)<3, abs(x^2 +1)<5 )  $ and $ 
+       abs(f(x)-l) = abs(x^(4) -1) &= abs(x-1)abs(x+1)abs(x^2 +1) \
+       & < delta * 3 * 5 \ 
+       & =  15 delta = epsilon 
+   $ #h(1fr) $ qed$ 
+    
+2. For any arbitrary $ epsilon$ there exists $ delta = min{1/2, epsilon/2}$ , s.t. $ 0 < abs(x-1)< delta$, 
+   so $ 
+       1-delta < x < delta+1 => 1/2 < 1/x < 2. 
+   $ 
+   and $ 
+       abs(g(x)-1) = abs(1/x - 1) = abs(x-1)/x < 2 abs(x-1) = 2 delta = epsilon. 
+   $ #h(1fr) $qed$
+   
 
 
+3. $ 
+    abs(h(x) - 2) = abs(f(x)- 1 + g(x) - 1) < abs(f(x)-1) + abs(g(x)-1) 
+$ <eq.3c>
 
+ From the previous two parts, we know that we can choose $ delta_1 = min{1, epsilon_1/15}$ and $ delta_2 = min{1/2, epsilon_2/2}$. To ensure @eq.3c is smaller than $ epsilon$ , we choose $ 
+     delta = min{1/2, 1, epsilon/2, epsilon/15} =  min{1/2, epsilon/15.}
+ $ Therefore, $ 
+      abs(h(x) - 2) < epsilon. 
+ $ 
+ #h(1fr) $qed$
+ 
 
 #pagebreak()
 = Problem 4:
