@@ -1,5 +1,5 @@
 #set math.equation(numbering: "(1)")
-#set page(margin: (x: 3cm, y: 1cm))
+#set page(margin: (x: 2cm, y: 2cm))
  #import "@preview/physica:0.9.3": *
 #place(top + right, rect(inset: 3pt)[MATH 421 HW4, Harry Luo])
 = Problem 1
@@ -13,8 +13,9 @@ Prove or disprove the following statements:
   Since $ 2-epsilon/2 in (2 - epsilon, 2+epsilon)$ , but $ 2-epsilon/2 in.not [2,infinity)$, 
 
   it follows that for any $ epsilon > 0$, the interval $ (2-epsilon, 2+epsilon)$ is not a subset of $ {x in RR: x >= 2}$, so
-  the set $ {x in RR: x >= 2}$ is not open.
-  #line(length: 100%)
+  the set $ {x in RR: x >= 2}$ is not open. So we have *disproved* the statement.
+  #h(1fr) $qed$
+  
 + Let $ epsilon > 0, x in {x in RR: x != 2 }.$ Let $ epsilon =abs( frac(x-2,2 ))$.
 
   Then for any $ y in (x - epsilon, x+epsilon),$ we have $ 
@@ -24,7 +25,8 @@ Prove or disprove the following statements:
       abs(y-2) &= abs(y - x + x - 2) \ &>= abs(x-2) - abs(y-x) \ &>= abs(x-2)- abs( frac(x-2,2 ))   \ &= frac(abs(x-2), 2)  \ & = epsilon > 0 
   $ 
   
-  Therefore $ y != 2 => y in {x in RR: x != 2 }$. So the set is open.$qed$ 
+  Therefore $ y != 2 => y in {x in RR: x != 2 }$. So the set is open. The statement is thus *proved*
+  #h(1fr) $qed$
 
  
 
@@ -44,27 +46,28 @@ Let $ A, B subset.eq RR$ be subsets. Prove the following statements:
 
     This is equivalent to $ x in A^(c) "or" x in B^(c) => x in (A^(c) union B^(c))$.
   
-    So for any $x in (A sect B)^c$, $x in (A^(c) union B^(c) )$, thus the two sets are equal.  $qed$ 
+    So for any $x in (A sect B)^c$, $x in (A^(c) union B^(c) )$, thus the two sets are equal.  
 
   - Let $x in (A union B)^(c)$, then $x in.not (A union B) => x in.not A "and " x in.not B$.
 
     So $x in A^(c) "and" x in B^(c) => x in (A^(c) sect B^(c))$.
-    So for any $x in (A union B)^c$, $x in (A^(c) sect B^(c))$, thus the two sets are equal.$qed$ 
+    So for any $x in (A union B)^c$, $x in (A^(c) sect B^(c))$, thus the two sets are equal.
+    #h(1fr) $qed$
 
-  #line(length: 100%)
+  
 + 
   - If A is closed and B is closed, then $A^(c) "and" B^(c) $ are open. Since unions of open sets are open, then $A^(c) union B^(c)$ is open. 
     
 
-    By De Morgan's Laws, $ A^(c) union B^(c)   = (A sect B)^(c)$ is closed. 
+    By De Morgan's Laws, $ A^(c) union B^(c)   = (A sect B)^(c)$ is open. 
 
-    Thus $A sect B$ is open.$qed$ 
+    Thus $A sect B$ is closed.
 
-  - If A is closed and B is closed, then $A^(c) $ and $B^(c) $are open. Since intersections of open sets are open, then $A^(c) sect B^(c)$ is open. 
+  - If A is closed and B is closed, then $A^(c) $ and $B^(c) $are open. Since finite intersections of open sets are open,  $A^(c) sect B^(c)$ is open. 
 
     By De Morgan's Laws, $ A^(c) sect B^(c) = (A union B)^(c)$ is open. 
 
-    Thus $A union B$ is closed.$qed$ 
+    Thus $A union B$ is closed.#h(1fr)$qed$ 
 
 
 
@@ -83,7 +86,7 @@ Let $ epsilon > 0$ . For each of the following functions $ RR -> RR$ and numbers
        & =  15 delta = epsilon 
    $ #h(1fr) $ qed$ 
     
-2. For any arbitrary $ epsilon$ there exists $ delta = min{1/2, epsilon/2}$ , s.t. $ 0 < abs(x-1)< delta$, 
+2. For any arbitrary $ epsilon$ there exists $ delta = min{1/2, epsilon slash 2}$ , s.t. $ 0 < abs(x-1)< delta$, 
    so $ 
        1-delta < x < delta+1 => 1/2 < 1/x < 2. 
    $ 
@@ -107,9 +110,27 @@ $ <eq.3c>
 
 #pagebreak()
 = Problem 4:
-let $ f,g: RR -> RR$ be functions s.t. $ lim_(x -> a) f(x) = l "and" lim_(x -> a) g(x)= m$ for some numbers a, $ l,m in RR$. Prove that if $forall x in RR f(x)<= g(x),$ then $ l < m$.
+let $ f,g: RR -> RR$ be functions s.t. $ lim_(x -> a) f(x) = l "and" lim_(x -> a) g(x)= m$ for some numbers a, $ l,m in RR$. Prove that if $forall x in RR  , f(x)<= g(x),$ then $ l <= m$.
 #line(length: 100%)
 == solution:
+
+Given that $lim_(x -> a) f(x) = l "and" lim_(x -> a) g(x)= m$, we know that $ 
+    forall epsilon > 0, exists delta_1 > 0, s.t. med 0 < abs(x-a) < delta_1 => abs(f(x) - l) < epsilon\
+    => l - epsilon <f(x)<epsilon + l\
+    forall epsilon > 0, exists delta_2 > 0, s.t. med  0 < abs(x-a) < delta_2 => abs(g(x) - m) < epsilon \
+    => m - epsilon <g(x)<epsilon + m
+$ 
+ 
+If $forall x in RR, f(x) <= g(x)$, then  $ 
+    l - epsilon < f(x) <= g(x) < epsilon + m \ => quad l - epsilon  < epsilon + m \ => l < m + 2 epsilon
+$ 
+
+Since $epsilon >0$ is arbitrary, the above inequality can be reduced to: $ 
+    l <= m .
+$ 
+The statement is thus proved.
+#h(1fr) $qed$
+
 
 
 
@@ -124,3 +145,17 @@ Let $ f,g: RR -> RR$ be functions and $ a in RR.$ Prove or disprove the followin
 _(hint: Each statement is either an application of the limit law for addition, or it is false. Remember, if the statement is false, then we need to come up with a counterexample.)_
 #line(length: 100%)
 == solution:
+
+- (a) Suppose $lim_(x -> a) f(x)$ and $lim_(x -> a) g(x)$ both does not exist, but consider a special case where $f(x) = - g(x)$, then $ 
+    lim_(x -> a) (f + g)(x) = lim_(x -> a) 0 = 0 ,
+$ which is a well-defined limit. So the statement is negated, i.e. *false*, by counterexample.
+ 
+- (b) Suppose $lim_(x -> a) f(x) = m$ , and $lim_(x -> a) (f + g)(x)$ does not exist, but $lim_(x->a) g(x) = l,$ for some $l,m in RR.$  Then by limit law for addition, $ 
+    lim_(x->a ) (f + g) =   lim_(x -> a) f(x)+ lim_(x -> a) g(x) = l + m in RR.
+$ This contradicts with the assumption that $lim_(x -> a) (f + g)(x)$ does not exist. So our assumption is false, and the original statement is *true*.
+
+- (c) Assume that $lim_(x -> a) f(x) = l$ exists and $lim_(x -> a) g(x) $ does not exist, but $lim_(x-> a ) (f+g)(x) = m, $ exists, for some $l,m in RR$. Then, by the limit law for addtion, we have, $ 
+    lim_(x -> a) (f + g)(x) = lim_(x -> a) f(x) + lim_(x -> a) g(x)=m\ => quad lim_(x->a) g(x) =  m - lim_(x -> a) f(x)= m - l  in RR. 
+$ We found that $lim(x->a)g(x)$ is well defined, which contradicts to our assumption. So our assumption that $lim(x->a)(f+g)(x)$ exists is false, and the original statement is *true* by contradiction.  
+  
+#h(1fr) $qed$
