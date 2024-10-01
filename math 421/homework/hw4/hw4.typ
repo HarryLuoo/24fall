@@ -107,7 +107,7 @@ $ <eq.3c>
 
 #pagebreak()
 = Problem 4:
-let $ f,g: RR -> RR$ be functions s.t. $ lim_(x -> a) f(x) = l "and" lim_(x -> a) g(x)= m$ for some numbers a,l,m in $ RR$. Prove that if $forall x in RR f(x)<= g(x),$ then $ l < m$.
+let $ f,g: RR -> RR$ be functions s.t. $ lim_(x -> a) f(x) = l "and" lim_(x -> a) g(x)= m$ for some numbers a, $ l,m in RR$. Prove that if $forall x in RR f(x)<= g(x),$ then $ l < m$.
 #line(length: 100%)
 == solution:
 
