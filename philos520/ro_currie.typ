@@ -52,7 +52,7 @@
       - Argue: the purpose of idealizations in historical science is often to facilitate testing by ensuring information is provided at the right grain
       - Introduce: the concept of investigative scaffolding and its importance in historical science
 
-II. Simulations and Surrogate Experiments
+== Simulations and Surrogate Experiments
     -  The author provides Parker's (2009) definition of simulation and discusses its implications.
     -  A detailed example of Hyde et al.'s study of Snowball Earth is presented:
        - The ice-sheet model is explained, which predicts ice extent
@@ -63,7 +63,7 @@ II. Simulations and Surrogate Experiments
        - They investigated the relationship between CO2 and continental freeboard
        - They tested the occurrence of snowballs against different continental arrangements
 
-III. Surrogate "Experiments"
+== Surrogate "Experiments"
      -  The author compares procedural and substantive accounts of experiments:
         - Procedural accounts define experiments as interventions on a system
         - Substantive accounts focus on the epistemic power of experimentation
@@ -72,7 +72,7 @@ III. Surrogate "Experiments"
         - They differ from true experiments in that the object and target are different kinds of things
      -  The advantages of surrogate experiments in historical science are discussed, particularly their ability to actively generate new knowledge about the past
 
-IV. The Purpose of Idealization
+== The Purpose of Idealization
     -  Weisberg's framework for understanding idealization's purposes is presented:
        - Tractability: Idealization helps manage complexity and compensate for limited knowledge
        - Explanatory salience: Idealization can isolate the most relevant causal factors
@@ -82,7 +82,7 @@ IV. The Purpose of Idealization
        - The inference tool used to estimate sauropod population and methane output is described
        - Van Loon's objections to the tool are discussed, highlighting issues with its level of idealization
 
-V. Investigative Scaffolding
+== Investigative Scaffolding
    -  The author defines and explains investigative scaffolding as a process where coarse-grained hypotheses must be established before finer-grained ones can be teste- 
    -  Examples from Snowball Earth research are provided to illustrate scaffolding:
       - The reevaluation of trace evidence led to more complex hypotheses about atmospheric composition

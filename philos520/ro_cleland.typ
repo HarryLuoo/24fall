@@ -6,7 +6,7 @@
 
 #place(top + right, rect(inset: 3pt)[Philos520 R.O. Harry Luo Oct 1st])
 
-*I. Introduction*
+== Introduction
 - *Scope*: Historical research plays a crucial role in natural sciences.
 - *Philosophical Focus*: Despite significant scientific achievements, philosophical discussions have largely overlooked historical natural sciences, except for evolutionary biology.
 - *Methodological Distinction*: Building on Cleland’s work (2001, 2002), the essay differentiates "prototypical historical science," which investigates unique, long-past events, from "classical experimental science," which examines regular patterns among event types.
