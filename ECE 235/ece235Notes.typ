@@ -149,6 +149,10 @@ $
 - Probability density is thus simplified to $ 
     p(x) = abs(Psi(x,t))^2 = abs(psi(x))^2
 $ 
+- Normalization condition: $ 
+    integral_(-infinity)^(infinity) abs(psi(x))^2 dif x = 1
+$
+
 
 == Infinite potential well- particle in a box 
 - For a particle in a box of length $L$ , where $V(x) = 0$ for $0 < x < L$, and $V(x) = infinity$ otherwise, the wavefunction is found by$ 
@@ -158,10 +162,14 @@ $ Noticing boundary values, the following is obtained: $
     E_n = frac(hbar^2 k_n^2 , 2 m) = n^2 frac( hbar^2 pi^2 ,2 m L ^2 ) = n^2 E_1   
 $ where $k= 2pi/ lambda; k^2 = (p/hbar)^2 = (2 m E)/(hbar^2)$ 
 
+- Specially, the energy levels can be also expressed in terms of $h c$ and $m c^2$: $ 
+    E_1 = frac((h c)^2 ,8 m c^2 L^2 )  ; quad E_n = frac(n^2 ( h c)^2 ,8 m c ^2 L ^2 ) 
+$ 
+ 
 
-
-
-
+- Normalization condition in box of length $L$: $ 
+    integral_(0)^(L) abs(psi(x))^2 dif x = 1
+$
 
 
 
@@ -169,3 +177,6 @@ $ where $k= 2pi/ lambda; k^2 = (p/hbar)^2 = (2 m E)/(hbar^2)$
 1. Useful integral for probability of wavefunction $ 
     integral_(-infinity)^(infinity)e^(-a(x+b)^2)   dif x = sqrt(pi/a)   
 $ 
+2. Useful constants: 
+   - hc = 1240 eV nm. 
+   - For an electron: $m c^2 = 0.511$MeV $= 5.11 e 5 $ eV 
