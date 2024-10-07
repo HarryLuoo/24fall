@@ -1,11 +1,13 @@
  #import "@preview/physica:0.9.3": *
-#show heading: text.with(weight: 1000, font: "Libre Baskerville")
-#set text(11pt)
-#set page(margin: (x: 4cm, y: 2cm),numbering: "1/1", columns: 1, flipped: false)
+#show heading: text.with(weight: 1000, font: "Libre Baskerville", size: 10pt)
+#set text(10pt)
+#set page(margin: (x: 3cm, y: 1cm),numbering: "1/1", columns: 1, flipped: false)
 #set math.equation(numbering:"[1")
 #show math.equation: set text(11pt)
 #show heading: underline
 #set math.cases(gap: 0.2em)
+
+
 = Highlights from ECE 235: Solid-state Physics
 Harry Luo\
 #line(length: 100%, stroke: (thickness: 2pt))
@@ -134,6 +136,36 @@ $
 $ 
 = Schrodinger's equation
 == Time-dependent Schrodinger's equation in 1D
-$ 
+ 1D Schrodinger's equation in position basis:$ 
     - frac(hbar^2 ,2m ) (diff^2 )/(diff x^2)Psi(x,t) + V(x,t) Psi(x,t) = i hbar (diff ) /( diff t)Psi(x,t)   
+$ 
+== Time-independent Schrodinger's equation in 1D
+Via separation of variable, set $Psi(x,t) =  psi(x) phi(t)$, and noticing $f= E/h$, we have $ 
+-frac(hbar ,2m ) (dif ^2)/(dif x^2 ) psi(x) + V(x)psi(x) = E psi(x) \ 
+   "time variation of wavefunction:" phi(t) = e^(-i E t slash hbar)  
+   
+$ 
+  
+- Probability density is thus simplified to $ 
+    p(x) = abs(Psi(x,t))^2 = abs(psi(x))^2
+$ 
+
+== Infinite potential well- particle in a box 
+- For a particle in a box of length $L$ , where $V(x) = 0$ for $0 < x < L$, and $V(x) = infinity$ otherwise, the wavefunction is found by$ 
+    - frac(hbar^2 ,2m ) (dif ^2)/(dif x^2 ) psi(x) = E psi(x) \ =>
+   psi_n (x) = sqrt(2/L) sin(frac(n pi x ,L ) ).  
+$ Noticing boundary values, the following is obtained: $ 
+    E_n = frac(hbar^2 k_n^2 , 2 m) = n^2 frac( hbar^2 pi^2 ,2 m L ^2 ) = n^2 E_1   
+$ where $k= 2pi/ lambda; k^2 = (p/hbar)^2 = (2 m E)/(hbar^2)$ 
+
+
+
+
+
+
+
+
+= Appendix
+1. Useful integral for probability of wavefunction $ 
+    integral_(-infinity)^(infinity)e^(-a(x+b)^2)   dif x = sqrt(pi/a)   
 $ 
