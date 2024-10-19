@@ -11,7 +11,7 @@ Fall 2024
 
 #line(length: 100%, stroke: (thickness: 2pt))
 #set heading(numbering: "1.1.")
-#show heading: text.with(size: 13pt, weight: 900, font: "Times New Roman")
+// #show heading: text.with(size: 13pt, weight: 900, font: "Times New Roman")
 #outline(indent: auto,)
 #pagebreak()
 
@@ -20,3 +20,4 @@ Fall 2024
 
 //part 1: from week 1 to midterm 1
 #include "421part1.typ"
+ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
