@@ -7,8 +7,30 @@
 #image("assets/2024-10-24-16-53-45.png")
 #line(length: 100%)
 
-    
-#image("assets/2024-10-25-01-08-55.png")
+
+
+1. We learn from example 4.2 that the electric field inside sphere due to uniform polarization is $  bold(E') = - 1/(3 epsilon_0)  bold(P). $
+So the electric field at center due to spherical cavity is $ 
+     bold(E) =  bold(E_0) +  1/(3 epsilon_0)  bold(P),\
+     =>  bold(D) = epsilon_0(bold(E_0) +  1/(3 epsilon_0)  bold(P)) =  bold(D_0) -  2/3bold(P)
+$ 
+1. As hinted, $ abs( bold(P) )A slash (4 pi epsilon_0 (L/2)^2 ) << abs( bold(E_0))$  implies that at the center of cavity, $ 
+     bold(E) approx  bold(E_0) \ =>  bold(D) =  epsilon_0 bold(E_0) =  bold(D_0) -  bold(P)
+$ 
+
+
+
+3. We can treat the cavity as a parallel plate capacitor. Its surface charge density is $ 
+    sigma = q/A = P. 
+$ 
+So the electric field at center of cavity due to wafer is $  bold(E)' =  - bold(P)/epsilon_0$ , and thus $ 
+     bold(E) = E_0 +  bold(P)/epsilon_0, \
+      bold(D) = epsilon_0 bold(E) =  D_0 
+$ 
+
+
+
+
 
 #pagebreak()
 = 2
@@ -78,7 +100,7 @@ $
 = 4
 #image("assets/2024-10-24-16-54-31.png")
 #line(length: 100%)
-+ Inside the cavity, $(r<a)$:
+- Inside the cavity, $(r<a)$:
  Separation of Variables with dipole gives 
   $ 
   V_I (r,theta) = 1/(4 pi epsilon_0) (frac(p cos theta , r^2 ) + sum_(l=0)^(infinity) A_(1,l) r^l P_l (cos theta) )
@@ -95,7 +117,7 @@ $
 
 
 
-+ Within shell, ($a < r < b$ ), *assuming a dialectic constant $epsilon_r$ *, we can jot down the following by using results from Separation of Variables:
+- Within shell, ($a < r < b$ ), *assuming a dialectic constant $epsilon_r$ *, we can jot down the following by using results from Separation of Variables:
   $ 
      V_("II")(r,theta) = 1/(4 pi epsilon) sum_(l=0)^(infinity) (A_(2,l) r^(l) + frac(B_(2,l) , r^(l+1)) ) P_l (cos theta)) 
   $ 
@@ -107,7 +129,7 @@ $
 $ 
 
 
-+ Outside the shell, $(r>b)$:$ 
+- Outside the shell, $(r>b)$:$ 
     V_"III" (r,theta) = frac(1 , 4 pi epsilon_0) sum_(l=0)^(infinity) B_(3,l)/r^(l+1) P_l (cos theta). 
 $ 
   Taking $l = 1$ gives: $ 
@@ -145,7 +167,14 @@ $
 = 5
 #image("assets/2024-10-24-16-54-46.png")
 #line(length: 100%)
-#image("assets/2024-10-25-01-10-26.png")
 
-
-#image("assets/2024-10-25-01-09-59.png")
+Identical set up, with dielectric material of permittivity $ epsilon,$ can be found in Example 4.5 of textbook. Citing the result, we have: $ 
+     bold(D) = cases(frac(Q, 4 pi r^2 ) hat(r) quad  &(r>a) , 0 quad &(r<a) ) ,  quad bold(E) = cases(0 quad & (r<a) ,frac(Q, 4 pi epsilon r^2 ) hat(r) quad & (r in a,b), frac(Q, 4 pi epsilon_0 r^2 )hat(r) quad & (r > b) ).
+$ 
+Using $ W = 1/2 integral_(V)  bold(D) dot  bold(E) dif tau,$ with $ epsilon = epsilon_0(1+ chi_e)$, we have: $ 
+    W &= 1/2 integral  bold(D) dot  bold(E)  dif tau \ 
+    & = frac(Q^2,8pi ) (1/epsilon integral_(a)^(b) 1/r^2  1/r^2  r^2  dif r quad + 1/epsilon_0 integral_(b)^(infinity) 1/r^2  dif r ) \ 
+    & = frac(Q^2 ,8 pi epsilon_0 ) ( (1/a - 1/b)(1/(1+chi_e))+ 1/b) \ 
+    & = (1/a + chi_e/b) frac(Q^2 ,8 pi epsilon_0 (1 + chi_e) )  
+$ 
+  
