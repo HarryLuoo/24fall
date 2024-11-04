@@ -39,7 +39,7 @@ Using $E = h c / lambda => lambda = h c/ E:$
     lambda = (1240 e V "nm") / (3.6 e V) = 3.44 e hyph.minus 7 m = 344 "nm"
 $ this is below 380 nm, so the crystal will transmit all visible light and absorb none.
 
-
+- c. I am not sure what there is to be justified as my answers are based on the calculation of the wavelength of the light, and the wavelength of the light is the only factor that determines whether the light will be absorbed or transmitted.
 #line(length: 100% , stroke: 2pt)
 
 = 4. 
@@ -51,6 +51,6 @@ $
 $ 
 and ploting the graph for $E_f in [-0.2, +0.2]$eV, and for $T in {4, 77, 300}K$, we have the following graph.
 
-#image("hw6_p4.png")
+#image("assets/2024-11-03-22-12-52.png")
 
 
