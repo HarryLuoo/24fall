@@ -15,8 +15,10 @@ Fall 2024
 #outline(indent: auto,)
 #pagebreak()
 
-//Notations
-#include "notations.typ"
+
 
 //part 1: from week 1 to midterm 1
 #include "part1.typ"
+
+//part 2: from midterm 1 to midterm 2
+include "part2.typ"

@@ -1,5 +1,7 @@
 {
-    "super-figure.filesToWatch": [],
+    "super-figure.filesToWatch": [
+        "c:\\Users\\surface\\Documents\\CLASSES\\24fall\\Phys 322\\notes\\ABJ.jpg.xcf"
+    ],
     "cSpell.enableFiletypes": [
         "typst"
     ]
