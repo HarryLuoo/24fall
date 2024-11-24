@@ -1,10 +1,7 @@
 #import "@preview/physica:0.9.3": *
 #set math.equation(numbering:"[1")
 
-#let scr(it) = text(
-  features: ("ss01",),
-  box($cal(it)$),
-)
+
 
 = Magnetostatics 
 == Magnetic Forces on Charge
@@ -53,13 +50,13 @@ Magnetostatics is the regime where : $
 $ 
 And the Biot-Savart law is used to find the magnetic field due to steady linear current: $ 
 #rect(inset: 8pt)[
-$ display( bold(B)(r) = frac(mu_0 I , 4 pi) integral_(l) frac(dif  bold(l)' times scr(hat(r)) , scr(r)^2) ,)$
+$ display( bold(B)(r) = frac(mu_0 I , 4 pi) integral_(l) frac(dif  bold(l)' times cal(hat(r)) , cal(r)^2) ,)$
 ]
 
 $
 and for a volume current: 
 $ 
-      bold(B)(r) = frac(mu_0 , 4pi) integral_(V) frac( bold(J)(arrow(r)') times scr(hat(r)),scr(r^2 ) ))  dif  tau'
+      bold(B)(r) = frac(mu_0 , 4pi) integral_(V) frac( bold(J)(arrow(r)') times cal(hat(r)),cal(r^2 ) ))  dif  tau'
 $ 
 
 
@@ -94,13 +91,13 @@ $ display(     laplacian  bold(A) = - mu_0 bold(J))$
 ]
 $ 
 which is poisson's equation for $ bold(A)$. The solution for some local charge distribution (volume, linear, surface) can be read off as:$ 
-     &bold(A)(arrow(r))= frac(mu_0 , 4pi) integral_(V) frac( bold(J)(arrow(r)) , scr(r))  dif tau, $     
+     &bold(A)(arrow(r))= frac(mu_0 , 4pi) integral_(V) frac( bold(J)(arrow(r)) , cal(r))  dif tau, $     
      $ 
-     &bold(A) = frac(mu_0 I , 4 pi ) integral_(l) 1/scr(r) dif  bold(l), $  
+     &bold(A) = frac(mu_0 I , 4 pi ) integral_(l) 1/cal(r) dif  bold(l), $  
      $ 
-      &bold(A) = frac(mu_0 , 4 pi) integral_(S)  bold(K)/scr(r) dif a' 
+      &bold(A) = frac(mu_0 , 4 pi) integral_(S)  bold(K)/cal(r) dif a' 
 $ 
-Relations between $ bold(A),  bold(J),  bold(B)$ that describes magnetostatis is summarized as follows:
+Relations between $ bold(A),  bold(J),  bold(B)$ that decalibes magnetostatis is summarized as follows:
 
 #align(center)[#image("ABJ.jpg", width: 50%,)]
 
@@ -121,7 +118,7 @@ $
 
 == Multipole Expansion of vector potential
 $ 
-     bold(A)(arrow(r))= frac(mu_0 I  , 4 pi ) integral.cont 1/scr(r) dif  bold(l)' = frac(mu_0 I  , 4 pi ) sum_(n=0)^(infinity) frac(1 , r^(n+1)) integral.cont (r')^n P_n(cos alpha) dif  bold(l)'
+     bold(A)(arrow(r))= frac(mu_0 I  , 4 pi ) integral.cont 1/cal(r) dif  bold(l)' = frac(mu_0 I  , 4 pi ) sum_(n=0)^(infinity) frac(1 , r^(n+1)) integral.cont (r')^n P_n(cos alpha) dif  bold(l)'
 $ 
 Given that $ integral.cont  dif  bold(l)' = 0,  bold(A)_"mono" = 0,$ and with some vector algebra,
 $ 
@@ -143,12 +140,14 @@ $
        bold(m) times hat(r) = m sin theta,
   $ 
   So $ 
-         bold(A)_"dipole" = frac(mu_0 m sin theta , 4 pi r^2) hat(phi) , \ 
+#rect(inset: 8pt)[
+$ display(         bold(A)_"dipole" = frac(mu_0 m sin theta , 4 pi r^2) hat(phi) ,)$
+]
+ \ 
           bold(B)_"dip" = curl  bold(A) = frac(mu_0 m , 4 pi r^3) ( 2 cos theta hat(r) + sin theta hat(theta)) 
   $ 
 
 #line(length: 100% , stroke: 2pt)
-
 = Magnetic Fields in Matter
 == Torque and Force on a magnetic dipole
 
@@ -183,19 +182,25 @@ $ magnetic moment per unit volume.
 == Field due to Magnetized Object
 
 Recall $ bold(A)$ due to magnetic dipole with dipole moment $ bold(m)$: $ 
-     bold(A) = frac(mu_0 , 4 pi )  frac(  bold(m) times hat(scr(r)), scr(r)^2 ).
+     bold(A) = frac(mu_0 , 4 pi )  frac(  bold(m) times hat(cal(r)), cal(r)^2 ).
 $ For a magnetized object, each volume element carries $ bold(m) =  bold(M) dif tau$ , so $ bold(A)$ due to a magnetized object with magnetization $ bold(M)$is : 
 $ 
- bold(A) = frac(mu_0 , 4 pi) integral_(V) frac( bold(M)(arrow(r)) times scr(hat(r)),scr(r)^2  )  dif tau . 
+ bold(A) = frac(mu_0 , 4 pi) integral_(V) frac( bold(M)(arrow(r)) times cal(hat(r)),cal(r)^2  )  dif tau . 
 $ 
 If we define a volume current density $ 
-     bold(J_b) = curl  bold(M), 
+#rect(inset: 8pt)[
+$ display(     bold(J_b) = curl  bold(M), )$
+]
+
 $ and a surface current density $ 
-     bold(K_b) =  bold(M) times hat(n),
+#rect(inset: 8pt)[
+$ display(     bold(K_b) =  bold(M) times hat(n),)$
+]
+
 $ then we can write $ 
      bold(A)(arrow(r)) = 
-     underbrace(frac(mu_0 , 4 pi) integral_(V) frac( bold(J_b)(r') ,scr(r) )  dif tau,"potential of Vol. current")+ 
-     underbrace(frac(mu_0 , 4 pi ) integral.cont_S frac( bold(K_b)(r') , scr(r) )  dif a', "potential of Surf. current")  
+     underbrace(frac(mu_0 , 4 pi) integral_(V) frac( bold(J_b)(r') ,cal(r) )  dif tau,"potential of Vol. current")+ 
+     underbrace(frac(mu_0 , 4 pi ) integral.cont_S frac( bold(K_b)(r') , cal(r) )  dif a', "potential of Surf. current")  
 $ 
 
 == Auxiliary Field $ bold(H)$
@@ -206,7 +211,10 @@ and by Amepere's law, $
     curl ( 1/mu_0  bold(B) -  bold(M)) =  bold(J)_f. 
 $ 
 We are thus motivated to define an Auxiliary Field $H$: $ 
-     bold(H) equiv 1/mu_0  bold(B) -  bold(M). 
+#rect(inset: 8pt)[
+$ display(     bold(H) equiv 1/mu_0  bold(B) -  bold(M). )$
+]
+
 $ 
 From which we can write the Amepere's Law in Magnetized material as $ 
     curl  bold(H) =  bold(J)_f quad <=> quad integral.cont  bold(H) dot dif bold(l) = I_"f_enc" 
@@ -231,26 +239,92 @@ $
 
 
 == Linear and Nonlinear MEdia 
-- For linear media, 
+- For linear media, magnetization is proportional to the Auxiliary Field H: $ 
+        bold(M) = chi_m  bold(H),\ 
+         bold(B) = mu  bold(H) .
+$ 
+Where $mu equiv mu_0(1 + chi_m)$ 
+
+#line(length: 100% , stroke: 2pt)
+= Electrodynamics
+== Ohm's law 
+    For a material with conductivity $sigma$, the current density is: $ 
+    bold(J) = sigma  bold(E),
+$<eq.ohm1>
+    and from which we can find $ 
+    div  bold(E) = 1/sigma dif  bold(J) = 0,
+$ so we are in such a regime where there's no charge accumulation ( incompressible field).
+
+@eq.ohm1 contains information on current density, and from which we can retrieve the current flowing through a materical as $ 
+#rect(inset: 8pt)[
+$ display(    I = integral_(V) J dif  bold(a))$
+]
+  
+$ 
 
 
 
+By noticing a proportionality between the total currnet flowing from one electrode to the otehr and the potential difference that set them aside, we arrive at a more familiar form of Ohm's law: $ 
+    V = I R.
+$
 
 
+== EMF
+For a circuit, there are two driving factors for the current, and we decalibe them using $ bold(f):$ force per unit charge. $ 
+     bold(f) =  bold(f)_s +  bold(E).
+$ 
+So for a loop circuit, $ 
+    integral.cont  bold(f) dif  bold(l) = integral.cont  bold(f)_s dot dif  bold(l) + underbrace(integral.cont  bold(E) dot dif  bold(l), =  0 ) equiv cal(E)
+$ 
+
+== Motional EMF and Faraday's Law
+Initially, the theory is such that when $f_s$ is due to magnetic force, then there is EMF generated in a loop. But then Faraday found through various experiments that:
+#align(center)[Whenever (and for whatever reason) the magnetic flux throught a loop changes, an emf $ 
+#rect(inset: 8pt)[
+$ display(    cal(E) = - frac(dif Phi_B, dif t) )$
+]
+$ will appear in the loop, where $ 
+    Phi_B = integral_(A)  bold(B) dot dif  bold(a)  
+$ 
+
+]
+_Maybe it's worth keep in mind WHY this is the case. We now know the how's, but it was hinted by GPT that the why is coming from Special Relativity. Stay tuned-- we need to revisit this with an reletivistic eye! (though it may be many years ahead...)_
 
 
+== Electromagnetic Induction, Induced Electric Field 
+From Faraday's law: $ 
+    cal(E) = integral.cont  bold(E) dif  bold(l)= - (dif Phi)/(dif t)  \ 
+    => 
+#rect(inset: 8pt)[
+$ display(    integral.cont  bold(E)  dif  bold(l) = - integral_(A) (diff  bold(B))/(diff t)   dif  bold(a))$
+]
+ ,
+$ <eq.ointE>
 
+and by Stoke's theorem, we can write: $ 
+#rect(inset: 8pt)[
+$ display(   curl  bold(E) = - (diff  bold(B))/(diff t))$
+]
 
+$<eq.curlE-Bt>
 
+When finding the direction of emf, we can use Lenz's law: *Nature abhors a change in flux.*
 
+When symmetry permits, we can use all tricks from Ampere's law (particually, amperean loop) on @eq.ointE to find the induced electric field.
+== 
+If $ bold(E)$ is a pure Faraday field, that is, if E is due exclusively to a changing B, with $rho = 0$, then: $ 
+    div bold(E) = 0
+$ <eq.divE0>
+ Notice an analogy between @eq.curlE-Bt, @eq.divE0 and  magnetostatics, $ 
+    div  bold(B) = 0, curl  bold(B) = mu_0  bold(J). 
+$ 
+ Further exploit this analogy, we can use Biot-Savar's law to find induced electric field: $ 
+    bold(E) =-1/(4 pi ) (diff )/(diff t) integral_(V) frac( bold(B) times cal(hat(r)) , cal(r^2 ))  dif tau 
+$
+  
 
-
-
-
-
-
-
-
+=== Quasistatic Approximation
+When finding the change in magnetic flux, we can use _magnetostatics _ for an appriciable approximation on $Phi = integral_(A)  bold(B) dif  bold(a) $ 
 
 
 
