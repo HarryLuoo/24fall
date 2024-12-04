@@ -3,7 +3,7 @@
  #import "@preview/physica:0.9.3": *
 #place(top + right, rect(inset: 3pt)[RO, OCT 31, Harry Luo])
 
-Uniformitarianism Re-Examined
+Uniformitarianism Re-Examined, Max Dresow
 
 == Introduction: Ediacaran Case Study
 *A* Sprigg's 1946 Discovery
@@ -55,8 +55,3 @@ Uniformitarianism Re-Examined
    - Lithification bias in older sediments
    - Taphonomic megabiases requiring correction
 
-== Synthesis
-- Present sometimes directly informative
-- Sometimes past informs other past (e.g., Permian reefs via Precambrian)
-- Modern stromatolites illuminate both
-- Some past potentially "locked" (parts of Ediacaran bi

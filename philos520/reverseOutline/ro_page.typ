@@ -3,7 +3,7 @@
  #import "@preview/physica:0.9.3": *
 #place(top + right, rect(inset: 3pt)[RO Nov 7, Harry Luo])
 
-The Role of Historical Science in Methodological Actualism
+The Role of Historical Science in Methodological Actualism, Meghan D. Page
 
 1. Introduction
 - Challenge: Historical science traditionally seen as reconstructive, not law-discovering

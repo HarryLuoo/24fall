@@ -5,8 +5,7 @@
 #line(length: 100% , stroke: 2pt)
 
 * Revised Proposal: *
- "Principle of Simplicity" is a fundamental principle in science, and on which we have justified many scientific methodologies like uniformitarianism. However, it is interesting to ask whether our belief in fundemental principles like simplicity is different from one's belief in religious dogmas. Using the historical development of uniformitarianism in geological sciences as a case study, I investigate how the principle of simplicity functions as an ultimate justification for scientific methodologies. The paper argues that while both science and religion rely on foundational assumptions that cannot be justified through purely empirical means, the way these assumptions function differs crucially.
-
+ "Principle of Simplicity" is a fundamental principle in science, and on which we have justified many scientific methodologies like uniformitarianism. However, it is interesting to ask whether our belief in fundemental principles like simplicity is different from being dogmatic. Using the historical development of uniformitarianism in geological sciences as a case study, I investigate how the principle of simplicity functions as an ultimate justification for scientific methodologies. 
 #line(length: 100%)
 1. Quine, W. V. O. (1951). Two dogmas of empiricism. *The Philosophical Review*, 60(1), 20–43.
 
