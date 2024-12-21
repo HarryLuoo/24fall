@@ -1,0 +1,626 @@
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb,physics}
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries Physics 322 Honors Problem Set  % Fill in the course name and section here % Fill in the homework number here
+\\
+Harry Luo % Fill in your name here
+\ 
+\end{center}
+
+% Problem 1 -----------------------------------------------------
+\begin{problem}
+    Prove Earnshaw’s theorem: a charged particle cannot be held in stable equilibrium(in otherwise empty space) by electrostatic forces alone
+\end{problem}
+\begin{solution}
+    
+    Consider a charge $q$ in an electrostatic potential $V(\mathbf{r})$. The potential energy of the charge is 
+    \[
+    U(\mathbf{r}) = q\, V(\mathbf{r}).
+    \] 
+    For a stable equilibrium at a point $\mathbf{r}_0$, we require that:
+    1. $\nabla U(\mathbf{r}_0) = q\, \nabla V(\mathbf{r}_0) = \mathbf{0}$, ensuring equilibrium.
+    2. The equilibrium must be stable, so $U(\mathbf{r})$ should have a strict local minimum at $\mathbf{r}_0$. Equivalently, $V(\mathbf{r})$ should have a local minimum at $\mathbf{r}_0$.
+    
+    However, in free space (without charges), the electrostatic potential $V$ satisfies Laplace’s equation:
+    \[
+    \nabla^2 V = 0.
+    \]
+   We know from PDF that the Harmonnic Functions attain maximum/minimum value only on boundaries; any extremum in the interior must be a saddle point.
+    
+    Since $V$ cannot have a true local minimum, $U(\mathbf{r})$ cannot either. Thus, no stable equilibrium point for a charged particle can be formed purely by electrostatic potentials in free space.
+\end{solution}
+
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+
+    \noindent\textbf{(a) Choosing an Origin to Eliminate the Dipole Moment}
+
+    Consider a charge distribution $\rho(\mathbf{r}')$ with total charge 
+    \[
+    Q = \int \rho(\mathbf{r}') \, d\tau'.
+    \] 
+    Suppose the total charge is nonzero: $Q \neq 0$. The dipole moment about the original origin is defined as
+    \[
+    \mathbf{p} = \int \rho(\mathbf{r}') \mathbf{r}' \, d\tau'.
+    \]
+    If we shift our coordinate system by $\mathbf{R}$, defining a new coordinate $\mathbf{r}'' = \mathbf{r}' - \mathbf{R}$, the dipole moment in the new coordinates becomes
+    \[
+    \mathbf{p}'' = \int \rho(\mathbf{r}')(\mathbf{r}' - \mathbf{R}) \, d\tau' 
+    = \mathbf{p} - Q \mathbf{R}.
+    \]
+    Since $Q \neq 0$, we can always choose 
+    \[
+    \mathbf{R} = \frac{\mathbf{p}}{Q},
+    \]
+    so that 
+    \[
+    \mathbf{p}'' = \mathbf{p} - Q \frac{\mathbf{p}}{Q} = \mathbf{0}.
+    \]
+    This defines the ``center of charge,'' a choice of origin about which the dipole moment vanishes.
+    
+    \medskip
+    
+    \noindent\textbf{(b) Multipole Expansion up to the Octupole Term}
+    
+    Recall that hte POtential due to cahrge distribution is given by  
+    \begin{align} 
+        V(\mathbf{r}) = \frac{1}{4 \pi \epsilon_{0}}  \sum_{n = 0}^{\infty} \frac{1}{r^{(n+1)} }\int_{V} (r')^{n} P_n(\cos \alpha) \rho(\mathbf{r'} )  \, d\tau 
+    \end{align}
+    Let us align the $z$-axis along $\mathbf{r}$ so that $\cos\alpha = \frac{\mathbf{r}\cdot \mathbf{r}'}{r r'}$.
+    Then we can read off the terms:
+    
+    1. \textbf{Monopole term ($n=0$):}
+    \[
+    V^{(0)}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0} \frac{1}{r} \int \rho(\mathbf{r}')\,d\tau.
+    \]
+    
+    2. \textbf{Dipole term ($n=1$):}
+    \[
+    V^{(1)}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0}\frac{1}{r^2}\int r' P_1(\cos\alpha)\rho(\mathbf{r}')\,d\tau.
+    \]
+    Since $P_1(\cos\alpha) = \cos\alpha$, we have
+    \[
+    V^{(1)}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0}\frac{1}{r^2}\int r' \frac{\mathbf{r}\cdot\mathbf{r}'}{r r'}\rho(\mathbf{r}')\,d\tau = \frac{1}{4\pi \epsilon_0}\frac{\mathbf{r}\cdot\mathbf{p}}{r^3},
+    \]
+    where $\mathbf{p} = \int \rho(\mathbf{r}')\mathbf{r}'\,d\tau$ is the dipole moment.
+    
+    3. \textbf{Quadrupole term ($n=2$):}
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0}\frac{1}{r^3}\int (r')^2 P_2(\cos\alpha)\rho(\mathbf{r}')\,d\tau.
+    \]
+    Since $P_2(\cos\alpha) = \frac{3\cos^2\alpha - 1}{2}$, we get
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{r^3}\int \rho(\mathbf{r}') (r')^2\frac{3(\cos\alpha)^2 - 1}{2}\,d\tau.
+    \]
+    
+    4. \textbf{Octupole term ($n=3$):}
+    Similarly, $P_3(\cos\alpha) = \frac{5\cos^3\alpha - 3\cos\alpha}{2}$, so:
+    \[
+    V^{(3)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{r^4}\int (r')^3 P_3(\cos\alpha)\rho(\mathbf{r}')\,d\tau.
+    \]
+    Substitute $P_3(\cos\alpha)$ to get:
+    \[
+    V^{(3)}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0}\frac{1}{r^4}\int \rho(\mathbf{r}') (r')^3 \frac{5(\cos\alpha)^3 - 3\cos\alpha}{2} \, d\tau.
+    \]
+    
+    Thus, up to the octupole term:
+    \[
+    V(\mathbf{r}) \approx \frac{1}{4\pi\epsilon_0}\left[\frac{Q}{r} + \frac{\mathbf{r}\cdot\mathbf{p}}{r^3} + \frac{1}{r^3}\int \rho(\mathbf{r}')\frac{(r')^2}{2}(3\cos^2\alpha - 1)d\tau + \frac{1}{r^4}\int \rho(\mathbf{r}')\frac{(r')^3}{2}(5\cos^3\alpha - 3\cos\alpha)d\tau \right].
+    \]
+    
+    \medskip
+    
+    \noindent\textbf{(c) Deriving the Quadrupole Moment Expression}
+    
+    We now focus on the quadrupole term more explicitly. Starting from the $n=2$ term:
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{r^3} \int \rho(\mathbf{r}') (r')^2 \frac{3\cos^2\alpha - 1}{2}\,d\tau.
+    \]
+    
+    Write $\cos\alpha = \frac{\mathbf{r}\cdot\mathbf{r}'}{r r'}$, so:
+    \[
+    \cos^2\alpha = \frac{(\mathbf{r}\cdot\mathbf{r}')^2}{r^2 (r')^2}.
+    \]
+    
+    Substitute this into the integrand:
+    \[
+    3\cos^2\alpha - 1 = 3\frac{(\mathbf{r}\cdot\mathbf{r}')^2}{r^2 (r')^2} - 1.
+    \]
+    Multiplying by $(r')^2/2$:
+    \[
+    \frac{(r')^2}{2}(3\cos^2\alpha - 1) = \frac{3(\mathbf{r}\cdot\mathbf{r}')^2}{2r^2} - \frac{(r')^2}{2}.
+    \]
+    
+    Thus:
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{r^3}\int \rho(\mathbf{r}')\left(\frac{3(\mathbf{r}\cdot\mathbf{r}')^2}{2r^2}-\frac{(r')^2}{2}\right)d\tau.
+    \]
+    
+    Factor out $\frac{1}{2r^3}$:
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{2r^5}\int \rho(\mathbf{r}') [3(\mathbf{r}\cdot\mathbf{r}')^2 - (r')^2 r^2 ]\, d\tau.
+    \]
+    
+    Now, note that $(\mathbf{r}\cdot\mathbf{r}')^2 = \sum_{i,j}r_i r_j r'_i r'_j$. We can rewrite the integrand using a symmetric tensor:
+    \[
+    3(\mathbf{r}\cdot\mathbf{r}')^2 - (r')^2 r^2 = \sum_{i,j} (3r'_i r'_j - (r')^2\delta_{ij})\frac{r_i r_j}{r^2}.
+    \]
+    
+    This motivates the \textit{definition} of the quadrupole moment tensor $Q_{ij}$:
+    \[
+    Q_{ij} := \int \rho(\mathbf{r}') \bigl(3 r'_i r'_j - (r')^2\delta_{ij}\bigr)\, d\tau.
+    \]
+    
+    Substitute back into $V^{(2)}(\mathbf{r})$:
+    \[
+    V^{(2)}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\frac{1}{2r^5}\sum_{i,j} Q_{ij} r_i r_j.
+    \]
+    
+    If the charge distribution is axially symmetric about the $z$-axis, then by symmetry:
+
+    - Off-diagonal quadrupole components vanish ($Q_{xy}=Q_{xz}=Q_{yz}=0$).
+
+    - The $x$ and $y$ directions are equivalent, so $Q_{xx}=Q_{yy}$.
+    
+    Because of the form of $Q_{ij}$, it also follows that $Q_{xx}+Q_{yy}+Q_{zz}=0$. With $Q_{xx}=Q_{yy}$, we get:
+    \[
+    2Q_{xx}+Q_{zz}=0 \implies Q_{xx}=Q_{yy}=-\frac{1}{2}Q_{zz}.
+    \]
+    
+    Hence the quadrupole tensor simplifies to:
+    \[
+    Q_{ij}=
+    \begin{pmatrix}
+    -\frac{1}{2}Q_{zz} & 0 & 0\\[6pt]
+    0 & -\frac{1}{2}Q_{zz} & 0\\[6pt]
+    0 & 0 & Q_{zz}
+    \end{pmatrix}.
+    \]
+
+\end{solution}
+
+% Problem 3 -----------------------------------------------------
+\newpage
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+
+    \noindent\textbf{(a)} Consider a neutral but polarizable atom in an electric field $\mathbf{E}$. The induced dipole moment is given by $\mathbf{p} = \alpha \mathbf{E}$, where $\alpha$ is the polarizability. The force on a dipole is:
+    \[
+    \mathbf{F} = (\mathbf{p} \cdot \nabla)\mathbf{E}.
+    \]
+    Substituting $\mathbf{p} = \alpha \mathbf{E}$, we have:
+    \[
+    \mathbf{F} = \alpha (\mathbf{E} \cdot \nabla)\mathbf{E}.
+    \]
+    
+    To connect this with $\nabla(E^2)$, note that:
+    \[
+    E^2 = \mathbf{E} \cdot \mathbf{E}.
+    \]
+    Taking the gradient:
+    \[
+    \nabla E^2 = \nabla(\mathbf{E} \cdot \mathbf{E}) = 2(\mathbf{E} \cdot \nabla)\mathbf{E} + 2\mathbf{E} \times (\nabla \times \mathbf{E}).
+    \]
+    
+    In electrostatics, $\nabla \times \mathbf{E} = 0$. Therefore:
+    \[
+    \nabla E^2 = 2(\mathbf{E} \cdot \nabla)\mathbf{E}.
+    \]
+    
+    Substitute this back into the expression for $\mathbf{F}$:
+    \[
+    \mathbf{F} = \alpha (\mathbf{E} \cdot \nabla)\mathbf{E} = \frac{\alpha}{2} \nabla(E^2).
+    \]
+    
+    Hence, the force on the atom is:
+    \[
+    \mathbf{F} = \frac{1}{2}\alpha \nabla(E^2).
+    \]
+    
+    This result shows that a neutral polarizable atom is pulled toward regions of stronger electric field.
+    
+    \medskip
+    
+    \noindent\textbf{(b)} Now we consider whether such a force can trap the atom at a stable equilibrium. For a stable equilibrium, we would need a local maximum of $E^2$, since the force $\mathbf{F} = \tfrac{1}{2}\alpha \nabla(E^2)$ points towards increasing $E^2$.
+    
+    Suppose, for the sake of contradiction, that $E^2$ does have a local maximum at some point $P$ in a charge-free region. Then we can draw a sphere of radius $R$ around $P$ such that for every point $P'$ on the spherical surface:
+    \[
+    E^2(P') < E^2(P).
+    \]
+    This implies:
+    \[
+    |\mathbf{E}(P')| < |\mathbf{E}(P)|.
+    \]
+    
+    However, from Problem 3.4 in Griffiths, we know that if no charge is enclosed within the sphere, the electric field at the center $P$ is equal to the average of the field over the spherical surface:
+    \[
+    \frac{1}{4\pi R^2}\int E \, da = E(P).
+    \]
+    
+    If we align the $z$-axis along $\mathbf{E}(P)$, we get:
+    \[
+    \frac{1}{4\pi R^2} \int E_z \, da = E(P).
+    \]
+    
+    But since $|\mathbf{E}(P')| < |\mathbf{E}(P)|$ everywhere on the surface, we have:
+    \[
+    \int E_z \, da \leq \int |\mathbf{E}(P')|\, da < \int |\mathbf{E}(P)|\, da = 4\pi R^2 E(P).
+    \]
+    
+    This implies:
+    \[
+    E(P) < E(P),
+    \]
+    a contradiction.
+    
+    The contradiction arises from the assumption that $E^2$ could have a local maximum in free space. Therefore, $E^2$ cannot have a local maximum in a region without charge. While it can have a local minimum (for instance, at a point where the field is zero, such as the midpoint between two equal charges), a local maximum is forbidden.
+    
+
+\end{solution}
+
+% Problem 4 -----------------------------------------------------
+\newpage
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+
+    \subsection*{(a)}
+    From Snell’s law:
+    \[
+    \sin\theta_T = \frac{n_1}{n_2}\sin\theta_I.
+    \]
+    For \(\theta_I > \theta_c\), we have \(\sin\theta_T > 1\). Define:
+    \[
+    \cos\theta_T = \sqrt{1 - \sin^2\theta_T} = i\sqrt{\sin^2\theta_T - 1}.
+    \]
+    The transmitted wavevector in medium 2 is:
+    \[
+    \mathbf{k}_T = \frac{\omega n_2}{c}(\sin\theta_T\,\hat{x} + \cos\theta_T\,\hat{z}).
+    \]
+    Since \(\sin\theta_T = (n_1/n_2)\sin\theta_I\), we rewrite:
+    \[
+    \mathbf{k}_T = \frac{\omega n_2}{c}\left(\frac{n_1}{n_2}\sin\theta_I\,\hat{x} + i\sqrt{\left(\frac{n_1}{n_2}\sin\theta_I\right)^2 - 1}\,\hat{z}\right).
+    \]
+    Set:
+    \[
+    k = \frac{\omega n_1}{c}\sin\theta_I,\quad \kappa = \frac{\omega}{c}\sqrt{(n_1\sin\theta_I)^2 - n_2^2}.
+    \]
+    The transmitted electric field can then be expressed as:
+    \[
+    \tilde{E}_T(r,t) = \tilde{E}_0 T e^{i(kx-\omega t)}e^{-\kappa z}.
+    \]
+    
+    \subsection*{(b) }
+    For parallel polarization, the Fresnel reflection coefficient \(R_{\parallel}\) can be expressed in terms of \(\alpha = (\cos\theta_T)/(\cos\theta_I)\). Under total internal reflection, \(\alpha\) is purely imaginary. If we write \(\alpha = i a\) with \(a\) real, the magnitude of the reflection coefficient simplifies to:
+    \[
+    |R_{\parallel}|^2 = 1.
+    \]
+    Thus, there is total reflection for parallel polarization.
+    
+    \subsection*{(c) }
+    A similar argument applies for perpendicular polarization. The corresponding Fresnel coefficient also simplifies to:
+    \[
+    |R_{\perp}|^2 = 1.
+    \]
+    Hence, total internal reflection is complete for both polarizations.
+    
+    \subsection*{(d)}
+    Choosing phases so that the transmitted field is real, the evanescent electric field for perpendicular polarization (with the field along \(\hat{y}\)) is:
+    \[
+    \mathbf{E}(r,t) = E_0 e^{-\kappa z}\cos(kx-\omega t)\hat{y}.
+    \]
+    From Maxwell’s equations, the corresponding magnetic field is:
+    \[
+    \mathbf{B}(r,t) = \frac{E_0}{\omega}e^{-\kappa z}\bigl[\kappa\sin(kx-\omega t)\hat{x} + k\cos(kx-\omega t)\hat{z}\bigr].
+    \]
+    
+    \subsection*{(e)}
+    Substitute \(\mathbf{E}\) and \(\mathbf{B}\) into Maxwell’s equations. One finds:
+    \[
+    \nabla\cdot\mathbf{E}=0,\quad \nabla\cdot\mathbf{B}=0,\quad \nabla\times\mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t},\quad \nabla\times\mathbf{B}=\mu_2\epsilon_2\frac{\partial \mathbf{E}}{\partial t}.
+    \]
+    All are satisfied due to the chosen form of \(k\), \(\kappa\), and the material relations.
+    
+    \subsection*{(f) }
+    
+The time-averaged Poynting vector determines the energy flow associated with the evanescent wave. Given the electric and magnetic fields derived in part (d):
+\[
+\mathbf{E}(r,t) = E_0 e^{-\kappa z}\cos(kx - \omega t)\,\hat{\mathbf{y}},
+\]
+\[
+\mathbf{B}(r,t) = \frac{E_0}{\omega} e^{-\kappa z} \left[ \kappa \sin(kx-\omega t)\,\hat{\mathbf{x}} + k \cos(kx-\omega t)\,\hat{\mathbf{z}} \right].
+\]
+
+The Poynting vector is defined as:
+\[
+\mathbf{S} = \frac{1}{\mu_2} (\mathbf{E} \times \mathbf{B}).
+\]
+
+\paragraph{}  
+Substitute the components of \(\mathbf{E}\) and \(\mathbf{B}\):
+\[
+\mathbf{E} = (0, E_0 e^{-\kappa z} \cos(kx - \omega t), 0), \quad 
+\mathbf{B} = \left( \frac{E_0 \kappa}{\omega} e^{-\kappa z} \sin(kx - \omega t), 0, \frac{E_0 k}{\omega} e^{-\kappa z} \cos(kx - \omega t) \right).
+\]
+The cross product \(\mathbf{E} \times \mathbf{B}\) is:
+\[
+\mathbf{E} \times \mathbf{B} = 
+\begin{vmatrix}
+\hat{\mathbf{x}} & \hat{\mathbf{y}} & \hat{\mathbf{z}} \\[6pt]
+0 & E_0 e^{-\kappa z} \cos(kx - \omega t) & 0 \\[6pt]
+\frac{E_0 \kappa}{\omega} e^{-\kappa z} \sin(kx - \omega t) & 0 & \frac{E_0 k}{\omega} e^{-\kappa z} \cos(kx - \omega t)
+\end{vmatrix}.
+\]
+
+Expanding the determinant:
+\[
+\mathbf{E} \times \mathbf{B} = E_0^2 e^{-2\kappa z} \left[ \frac{k}{\omega} \cos^2(kx - \omega t)\,\hat{\mathbf{x}} - \frac{\kappa}{\omega} \sin(kx - \omega t) \cos(kx - \omega t)\,\hat{\mathbf{z}} \right].
+\]
+
+\paragraph{}  
+The Poynting vector becomes:
+\[
+\mathbf{S} = \frac{1}{\mu_2} (\mathbf{E} \times \mathbf{B}) = \frac{E_0^2}{\mu_2 \omega} e^{-2\kappa z} \left[ k \cos^2(kx - \omega t)\,\hat{\mathbf{x}} - \kappa \sin(kx - \omega t) \cos(kx - \omega t)\,\hat{\mathbf{z}} \right].
+\]
+
+\paragraph{}
+The time averages of the relevant trigonometric functions are:
+\[
+\langle \cos^2(kx - \omega t) \rangle = \frac{1}{2}, \quad \langle \sin(kx - \omega t) \cos(kx - \omega t) \rangle = 0.
+\]
+Substituting these into the expression for \(\mathbf{S}\):
+\[
+\langle \mathbf{S} \rangle = \frac{E_0^2}{\mu_2 \omega} e^{-2\kappa z} \left[ \frac{k}{2}\,\hat{\mathbf{x}} + 0 \cdot \hat{\mathbf{z}} \right].
+\]
+Simplifying:
+\[
+\langle \mathbf{S} \rangle = \frac{E_0^2 k}{2 \mu_2 \omega} e^{-2\kappa z} \hat{\mathbf{x}}.
+\]
+
+
+\end{solution}
+
+% Problem 5 -----------------------------------------------------
+\newpage
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+
+
+    By definition of TM modes, we have a nonzero longitudinal electric field $E_{z}(x,y,z,t)$, and from Maxwell's equations in the phasor form (assuming time-dependence $e^{-i\omega t}$), the fields satisfy the wave equation.
+
+    \noindent
+    \textbf{Wave Equation for TM Modes:}  
+    Since the fields vary as $e^{i(kz-\omega t)}$ along $z$, let
+    \[
+    E_{z}(x,y,z) = \mathcal{E}(x,y)e^{i(kz)}.
+    \]
+    Inside the waveguide (with no charge), Maxwell’s equations lead to the scalar Helmholtz equation for $E_z$:
+    \[
+    \nabla^2 E_z + \frac{\omega^2}{c^2}E_z = 0.
+    \]
+    Because $E_z$ depends on $z$ as $e^{i k z}$, we write:
+    \[
+    \frac{\partial^2 E_z}{\partial x^2} + \frac{\partial^2 E_z}{\partial y^2} + \left(\frac{\omega^2}{c^2}-k^2\right)E_z = 0.
+    \]
+    
+    Define $\mathcal{E}(x,y)$ via $E_z(x,y,z)=\mathcal{E}(x,y)e^{i(kz)}$. Then:
+    \[
+    \frac{\partial^2 \mathcal{E}}{\partial x^2} + \frac{\partial^2 \mathcal{E}}{\partial y^2} + \left(\frac{\omega^2}{c^2}-k^2\right)\mathcal{E} = 0.
+    \]
+    
+    Set 
+    \[
+    k_x^2 + k_y^2 = \frac{\omega^2}{c^2}-k^2.
+    \]
+    We separate variables:
+    \[
+    \mathcal{E}(x,y) = X(x)Y(y).
+    \]
+    This gives:
+    \[
+    \frac{X''(x)}{X(x)} + \frac{Y''(y)}{Y(y)} = - (k_x^2 + k_y^2).
+    \]
+    
+    From this, we obtain two separate ODEs:
+    \[
+    X''(x) + k_x^2 X(x)=0, \quad Y''(y) + k_y^2 Y(y)=0.
+    \]
+    
+    \noindent
+    \textbf{Boundary Conditions:}  
+    The waveguide walls are perfect conductors. On these walls, the tangential electric field must vanish. Since $E_z$ is tangential at $x=0,a$ and $y=0,b$, we require:
+    \[
+    E_z(0,y,z)=0, \quad E_z(a,y,z)=0, \quad E_z(x,0,z)=0, \quad E_z(x,b,z)=0.
+    \]
+    These conditions imply:
+    \[
+    X(0)=X(a)=0, \quad Y(0)=Y(b)=0.
+    \]
+    
+    The functions that vanish at both ends are sine functions. Thus:
+    \[
+    X(x)=\sin\left(\frac{m \pi x}{a}\right), \quad m=1,2,3,\ldots
+    \]
+    \[
+    Y(y)=\sin\left(\frac{n \pi y}{b}\right), \quad n=1,2,3,\ldots
+    \]
+    
+    \noindent
+    (For TM modes, both $m,n \geq 1$ to avoid trivial solutions.)
+    
+    \noindent
+    \textbf{Field Form:}  
+    Thus the longitudinal electric field is:
+    \[
+    E_z(x,y,z) = E_0 \sin\left(\frac{m \pi x}{a}\right)\sin\left(\frac{n \pi y}{b}\right)e^{i(kz-\omega t)}.
+    \]
+    
+    \noindent
+    \textbf{Cutoff Frequencies:}  
+    From the separation constants, we know:
+    \[
+    k_x=\frac{m \pi}{a}, \quad k_y=\frac{n \pi}{b}.
+    \]
+    The dispersion relation is:
+    \[
+    k^2 + k_x^2 + k_y^2 = \frac{\omega^2}{c^2}.
+    \]
+    
+    This gives:
+    \[
+    k = \sqrt{\frac{\omega^2}{c^2} - \left(\frac{m\pi}{a}\right)^2 - \left(\frac{n\pi}{b}\right)^2}.
+    \]
+    
+    Define the cutoff frequency $\omega_{mn}$:
+    \[
+    \omega_{mn} = c\pi \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}.
+    \]
+    
+    For propagation, we need $\omega > \omega_{mn}$. If $\omega < \omega_{mn}$, $k$ becomes imaginary and the mode does not propagate (it is evanescent).
+    
+    \noindent
+    \textbf{Transverse Fields:}  
+    Once $E_z$ is known, the transverse electric and magnetic fields ($E_x,E_y,B_x,B_y$) can be obtained using Maxwell’s equations. For TM modes:
+    \[
+    B_z = 0.
+    \]
+    Using $\nabla \times \mathbf{E} = -i\omega \mu_0 \mathbf{B}$ and $\nabla \times \mathbf{B} = i\omega \epsilon_0 \mathbf{E}$, one can show:
+    \[
+    E_x, E_y \sim \frac{\partial E_z}{\partial x}, \frac{\partial E_z}{\partial y}, \quad B_x, B_y \sim \frac{k}{\omega \mu_0}\, E_z.
+    \]
+    All transverse fields are determined by spatial derivatives of the known $E_z$.
+    
+    \noindent
+    \textbf{Phase and Group Velocities:}  
+    Rewrite $k$ as:
+    \[
+    k=\frac{1}{c}\sqrt{\omega^2 - \omega_{mn}^2}.
+    \]
+    
+    The phase velocity is:
+    \[
+    v_{\text{phase}} = \frac{\omega}{k} = \frac{c}{\sqrt{1-(\omega_{mn}/\omega)^2}} > c.
+    \]
+    
+    The group velocity, which represents the energy transport speed, is:
+    \[
+    v_{\text{group}} = \frac{d\omega}{dk} = c\sqrt{1-(\omega_{mn}/\omega)^2} < c.
+    \]
+    
+
+
+
+\end{solution}
+
+% Problem 6 -----------------------------------------------------
+\newpage
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+
+
+
+\noindent (a) \emph{Coordinate-free expressions:}
+
+Start with the given dipole potential for electric dipole radiation along the $z$-axis:
+\[
+V(r,\theta,t) = -\frac{p_0 \omega}{4\pi \epsilon_0 c}\frac{\cos\theta}{r}\sin[\omega(t - r/c)].
+\]
+
+Replace $p_0 \cos\theta$ by $\mathbf{p}_0 \cdot \hat{\mathbf{r}}$:
+\[
+V(r,t) = -\frac{\omega}{4\pi \epsilon_0 c}\frac{\mathbf{p}_0 \cdot \hat{\mathbf{r}}}{r}\sin[\omega(t - r/c)].
+\]
+
+Similarly, the vector potential (Eq. 11.17) in a coordinate-free form:
+\[
+\mathbf{A}(r,t) = \frac{\mu_0 \omega}{4\pi}\frac{\mathbf{p}_0}{r}\sin[\omega(t - r/c)].
+\]
+
+For the fields (Eqs. 11.18 and 11.19), use vector identities:
+\[
+\mathbf{E}(r,t) = \frac{\mu_0 \omega^2}{4\pi}\frac{\hat{\mathbf{r}}\times(\mathbf{p}_0\times \hat{\mathbf{r}})}{r}\cos[\omega(t - r/c)],
+\]
+\[
+\mathbf{B}(r,t) = \frac{\mu_0 \omega^2}{4\pi c}\frac{\mathbf{p}_0\times\hat{\mathbf{r}}}{r}\cos[\omega(t - r/c)].
+\]
+
+Finally, the time-averaged Poynting vector (Eq. 11.21):
+\[
+\langle\mathbf{S}\rangle = \frac{\mu_0 \omega^4}{32\pi^2 c}\frac{(\mathbf{p}_0 \times \hat{\mathbf{r}})^2}{r^2}\hat{\mathbf{r}}.
+\]
+
+
+\noindent (b) \emph{Rotating dipole:}
+
+Consider:
+\[
+\mathbf{p}(t) = p_0[\cos(\omega t)\hat{\mathbf{x}} + \sin(\omega t)\hat{\mathbf{y}}].
+\]
+
+This can be viewed as the superposition of two oscillating dipoles: one along $x$ and one along $y$, with a $90^\circ$ phase shift. Using linearity and the known fields for each component dipole (as in part (a), but oriented along $x$ and $y$ respectively), we sum the contributions:
+\[
+\mathbf{E}(r,t) = \mathbf{E}_x(r,t) + \mathbf{E}_y(r,t), \quad
+\mathbf{B}(r,t) = \mathbf{B}_x(r,t) + \mathbf{B}_y(r,t).
+\]
+
+After inserting the appropriate phase factors, we find that the cross terms vanish on time averaging due to orthogonality and phase difference. The final time-averaged Poynting vector then simplifies to:
+\[
+\langle \mathbf{S}\rangle = \langle \mathbf{S}_x \rangle + \langle \mathbf{S}_y \rangle,
+\]
+since cross terms average to zero.
+
+Each component dipole radiates:
+\[
+P_{\text{single}} = \frac{\mu_0 p_0^2 \omega^4}{12\pi c}.
+\]
+
+The total power for the two perpendicular dipoles (one along $x$ and one along $y$ with a $90^\circ$ phase shift) is:
+\[
+P_{\text{total}} = 2 \times \frac{\mu_0 p_0^2 \omega^4}{12\pi c} = \frac{\mu_0 p_0^2 \omega^4}{6\pi c}.
+\]
+
+
+
+
+
+\end{solution}
+
+
+\end{document}
