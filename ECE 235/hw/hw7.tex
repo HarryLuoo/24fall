@@ -1,0 +1,168 @@
+
+% --------------------------------------------------------------
+% This part is the preamble, which you don't have to worry about
+% To type your solutions, scroll down to where it says "Start here"
+% --------------------------------------------------------------
+
+% This defines the formatting for the document
+\documentclass[12pt]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\setlist[enumerate,1]{label=(\alph*)}
+\setlist[enumerate,2]{label=(\roman*)}
+
+% This imports the packages which we will need to type math symbols
+\usepackage{amsmath,amssymb}
+
+% This defines the "problem" and "solution" environments
+\usepackage{amsthm}
+\theoremstyle{definition}\newtheorem{problem}{Problem}
+\newenvironment{solution}{\begin{proof}[\bfseries\textup{Solution:}]}{\end{proof}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% This is the title:
+\begin{center}
+\bfseries ECE 235 % Fill in the course name and section here
+\
+Homework 7 % Fill in the homework number here
+\
+Harry Luo % Fill in your name here
+\end{center}
+
+% Problem 1 -----------------------------------------------------
+\begin{problem}
+% Type or paste the problem statement here.
+\end{problem}
+\begin{solution}
+    \subsection*{part a}
+
+    The drift current density in a semiconductor is given by the sum of contributions from electrons and holes:
+    $$
+    J_{\text{drift}} = e p \mu_p E + e n \mu_n E
+    $$
+    where:
+    \begin{itemize}
+        \item \( p \) and \( n \) are the hole and electron concentrations (\( \text{cm}^{-3} \)),
+        \item \( \mu_p \) and \( \mu_n \) are the hole and electron mobilities (\( \text{cm}^2/\text{Vs} \))
+    \end{itemize}
+    In an n-type semiconductor, where \( n \gg p \), the hole contribution \( e p \mu_p E \) becomes negligible, simplifying the expression to:
+    $$
+    J_{\text{drift}} \approx e n \mu_n E
+    $$
+    
+    \subsection*{b}
+    
+    Given:
+    \begin{itemize}
+        \item Donor concentration \( N_D = 10^{16} \, \text{cm}^{-3} \) (thus \( n \approx N_D = 10^{16} \, \text{cm}^{-3} \)),
+        \item Electron mobility \( \mu_n = 1350 \, \text{cm}^2/\text{Vs} \),
+        \item Electric field \( E = 100 \, \text{V/cm} \).
+    \end{itemize}
+    
+    $$
+    J_{\text{drift}} = e n \mu_n E = (-1.6 \times 10^{-19} \, \text{C}) \times (10^{16} \, \text{cm}^{-3}) \times (1350 \, \text{cm}^2/\text{Vs}) \times (100 \, \text{V/cm})
+    $$
+    Algebra yields:
+    $$
+    J_{\text{drift}} = - 1.6 \times 10^{-19} \times 10^{16} \times 1350 \times 100 = - 216 \, \text{A/cm}^2
+    $$
+    
+    \subsection*{c}
+    With increased doping:
+    \begin{itemize}
+        \item Donor concentration \( N_D = 10^{18} \, \text{cm}^{-3} \),
+        \item Reduced electron mobility \( \mu_n = 400 \, \text{cm}^2/\text{Vs} \).
+    \end{itemize}
+    
+    $$
+    J_{\text{drift}} = e n \mu_n E = (-1.6 \times 10^{-19} \, \text{C}) \times (10^{18} \, \text{cm}^{-3}) \times (400 \, \text{cm}^2/\text{Vs}) \times (100 \, \text{V/cm})
+    $$
+    Algebra yields:
+    $$
+    J_{\text{drift}} = -1.6 \times 10^{-19} \times 10^{18} \times 400 \times 100 = -6400 \, \text{A/cm}^2
+    $$
+    
+    Increasing the donor concentration from \( 10^{16} \, \text{cm}^{-3} \) to \( 10^{18} \, \text{cm}^{-3} \) results in a significant increase in electron concentration (\( n \)) by a factor of 100. Although the electron mobility (\( \mu_n \)) decreases due to enhanced scattering from the higher dopant density, the overall drift current density \( J_{\text{drift}} \) increases substantially because the rise in carrier concentration outweighs the reduction in mobility.
+\end{solution}
+
+% Problem 2 -----------------------------------------------------
+\newpage
+\begin{problem}
+
+\end{problem}
+\begin{solution}
+
+
+    \subsection*{Part (a) }
+    The diffusion current density is given by Fick's first law:
+    $$J_p = -qD_p\frac{dp}{dx}$$
+    
+    Given $\Delta x = 50\,\mu\text{m} = 5\times10^{-3}\,\text{cm}$, the concentration gradient is:
+    $$\frac{dp}{dx} = \frac{5\times10^{16} - 10^{17}}{5\times10^{-3}} = -10^{19}\,\text{cm}^{-4}$$
+    
+    Therefore:
+    $$J_p = -(1.6\times10^{-19})(12)(-10^{19}) = 19.2\,\text{A}/\text{cm}^2$$
+    
+    \subsection*{Part (b) }
+    The drift current density is:
+    $$J_{drift} = qp\mu_pE$$
+    
+    Using average hole concentration $\bar{p} = \frac{10^{17} + 5\times10^{16}}{2} = 7.5\times10^{16}\,\text{cm}^{-3}$:
+    $$J_{drift} = (1.6\times10^{-19})(7.5\times10^{16})(450)(10^3) = 5400\,\text{A}/\text{cm}^2$$
+    
+    The drift current density is significantly larger than the diffusion current density due to the strong electric field of $10^3\,\text{V}/\text{cm}$, suggesting that drift mechanisms dominate over diffusion in carrier transport within the p-type silicon sample..
+
+\end{solution}
+
+% Continue adding more problems as needed...
+
+\newpage
+\begin{problem}
+
+\end{problem}
+\begin{solution}
+    \subsection*{(a)}
+
+For electrons in semiconductors:
+$$
+J_{\text{total}} = J_{\text{drift}} + J_{\text{diff}} = q n(x) \mu_n E - q D_n \frac{dn(x)}{dx}
+$$
+where $q = 1.6 \times 10^{-19}$ C (electron charge)
+
+\subsection*{(b) Calculations at $x = 10 \mu m$ }
+
+1. Electron concentration at $x = 10 \mu m$:
+$$
+n(x) = 5 \times 10^{15} + (3 \times 10^{14})(10^{-3}) = 5.0003 \times 10^{15} \text{ cm}^{-3}
+$$
+
+2. Drift current density:
+\begin{align*}
+J_{\text{drift}} &= q n \mu_n E \\
+&= (1.6 \times 10^{-19})(5.0003 \times 10^{15})(1350)(50) \\
+&= 54.0032 \text{ A/cm}^2
+\end{align*}
+
+3. Diffusion current density:
+\begin{align*}
+J_{\text{diff}} &= q_e D_n \frac{dn}{dx} \\
+&= (-1.6 \times 10^{-19})(35)(3 \times 10^{14}) \\
+&= -1.68 \times 10^{-3} \text{ A/cm}^2
+\end{align*}
+
+4. Total current density:
+$$
+J_{\text{total}} = 54.0032 - 0.00168 \approx 54 \text{ A/cm}^2
+$$
+
+
+\end{solution}
+The drift current is the primary contributor to the total current in this silicon sample under the given conditions.
+The diffusion current is present but contributes minimally due to its much smaller magnitude.
+\end{document}
