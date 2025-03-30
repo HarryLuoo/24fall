@@ -1,5 +1,11 @@
-//week 1
+= Fourier Series 
 
+
+
+
+
+
+#line(length: 100%)
 = Heat Equation
 For tempreature $u( bold(x))$, head conduction or particle diffusion can be described by the head equation:
 $ 

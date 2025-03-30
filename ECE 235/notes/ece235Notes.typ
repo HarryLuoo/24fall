@@ -2,24 +2,30 @@
 
 //////////notecard mode////////////
 
-#show heading: text.with(weight: 1000, font: "Libre Baskerville", size: 6pt)
-#set text(7pt)
-#set page(margin: (x: 0.3cm, y: 0.5cm),numbering: "1/1", columns: 4, flipped: true)
-#show math.equation: set text(7pt)
+// #show heading: text.with(weight: 1000, font: "Libre Baskerville", size: 6pt)
+// #set text(7pt)
+// #set page(margin: (x: 0.3cm, y: 0.5cm),numbering: "1/1", columns: 4, flipped: true)
+// #show math.equation: set text(7pt)
 
 
 #set math.equation(numbering:"[1")
-#show heading: underline
+#show heading.where(level: 1): underline.with(stroke: 2pt, offset: 2pt)
 #set math.cases(gap: 0.2em)
 #set page("us-letter")
 
 
-// = Highlights from ECE 235: Solid-state Physics
-// Harry Luo\
-// #line(length: 100%, stroke: (thickness: 2pt))
-// #set heading(numbering: "1.1")
-// #outline(indent: auto,)
-// #pagebreak()
+= Highlights from ECE 235: Solid-state Physics
+Harry Luo\
+
+Notes prepared mainly for exam preparations for ECE 235. Some basic results from modern physics are discussed, and many inks has been spilled on Schrodinger's equation. Schrodinger's equation is treated as a standard PDE and is solved via separation of variables in 1D and 3D, and with different potential functions. This class can be seen as a fun supplement to Math 322: Partial Differential Equations.
+
+The final 1/3 of the class is on solid state physics, with an attention on PN junctions. However, the class is poorly organized after MT2 and the contents are ill-instructed. It is out of these reasons that I try to frame this note as a recap on Modern physics, and *an introduction to Schrodinger's equation.*
+#line(length: 100%, stroke: (thickness: 2pt))
+
+
+#set heading(numbering: "1.1")
+#outline(indent: auto,)
+#pagebreak()
 
 
 
@@ -257,7 +263,7 @@ Where n is a quautum number $n in {1,2,3 dots}$. Ground state: $n_1 = n_2 = n_3 
     E_(112) = E_(121) = E_(211)
 $ 
  
-== Scho's equation in spherical coord: atomic model, and quantum numbers
+== Scho's equation in spherical coordinates:  atomic model, and quantum numbers
 
 Due to ugliness of Spherical Laplacian, and out of our respect to Engeineering, we will skip the explicit Schrodinger's Eqn in spherical coord.
 
